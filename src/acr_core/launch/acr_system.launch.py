@@ -31,7 +31,7 @@ def generate_launch_description():
         package='ros_gz_sim', executable='create', output='screen',
         arguments=['-name', 'ev_vehicle', '-file',
                    os.path.join(pkg_share, 'models', 'ev_vehicle.sdf'),
-                   '-x', '3.0', '-y', '0.0', '-z', '0.0'])
+                   '-x', '2.60', '-y', '0.0', '-z', '0.0'])
 
     with open(os.path.join(pkg_share, 'urdf', 'acr_rrbot.urdf'), encoding='utf-8') as urdf_file:
         robot_description = urdf_file.read()
@@ -59,7 +59,7 @@ def generate_launch_description():
         condition=IfCondition(spawn_obstacle),
         arguments=['-world', 'acr_world', '-name', 'mrm_obstacle', '-file',
                    os.path.join(pkg_share, 'models', 'box_obstacle.sdf'),
-                   '-x', '0.75', '-y', '0.0', '-z', '0.30'])
+                   '-x', '1.18', '-y', '0.0', '-z', '0.725'])
 
     return LaunchDescription([
         DeclareLaunchArgument('spawn_obstacle', default_value='false',

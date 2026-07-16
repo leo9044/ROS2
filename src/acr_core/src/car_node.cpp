@@ -74,7 +74,7 @@ private:
 
   void feedback(GoalHandle::SharedPtr, const std::shared_ptr<const ChargeRobot::Feedback> feedback)
   {
-    RCLCPP_INFO(get_logger(), "Charging progress: %.1f%%", feedback->current_percent);
+    RCLCPP_INFO(get_logger(), "Moving to charging port: %.1f%%", feedback->current_percent);
   }
 
   void result(const GoalHandle::WrappedResult & result)

@@ -29,6 +29,7 @@ public:
     safety_distance_ = this->declare_parameter<double>("safety_distance", 0.3);
     approved_vin_ = this->declare_parameter<std::string>("approved_vin", "ACR-2026-0001");
     control_period_ms_ = this->declare_parameter<int>("control_period_ms", 50);
+    joint2_target_angle_ = this->declare_parameter<double>("joint2_target_angle", 0.70);
 
     command_pub_ = this->create_publisher<std_msgs::msg::Float64>("/cmd_pos", 10);
     joint2_command_pub_ = this->create_publisher<std_msgs::msg::Float64>("/joint2_cmd_pos", 10);
@@ -61,12 +62,13 @@ public:
 private:
   void joint_callback(const sensor_msgs::msg::JointState::SharedPtr msg)
   {
+    std::lock_guard<std::mutex> lock(state_mutex_);
     for (size_t i = 0; i < msg->name.size() && i < msg->position.size(); ++i) {
       if (msg->name[i] == "joint1") {
-        std::lock_guard<std::mutex> lock(state_mutex_);
         joint1_angle_ = msg->position[i];
         has_joint_state_ = true;
-        return;
+      } else if (msg->name[i] == "joint2") {
+        joint2_angle_ = msg->position[i];
       }
     }
   }
@@ -121,10 +123,11 @@ private:
   {
     action_active_.store(true);
     const double start_angle = current_angle();
+    const double start_joint2_angle = current_joint2_angle();
     const double target = goal_handle->get_goal()->target_angle;
     constexpr int kSteps = 200;
     auto result = std::make_shared<ChargeRobot::Result>();
-    publish_joint2_hold();
+    publish_joint2_command(start_joint2_angle);
 
     for (int step = 0; step <= kSteps && rclcpp::ok(); ++step) {
       if (is_danger_.load()) {
@@ -143,12 +146,14 @@ private:
       }
       const double ratio = static_cast<double>(step) / kSteps;
       publish_command(start_angle + (target - start_angle) * ratio);
+      publish_joint2_command(start_joint2_angle + (joint2_target_angle_ - start_joint2_angle) * ratio);
       auto feedback = std::make_shared<ChargeRobot::Feedback>();
       feedback->current_percent = 100.0 * ratio;
       goal_handle->publish_feedback(feedback);
       std::this_thread::sleep_for(std::chrono::milliseconds(control_period_ms_));
     }
     publish_command(target);
+    publish_joint2_command(joint2_target_angle_);
     result->success = true;
     goal_handle->succeed(result);
     action_active_.store(false);
@@ -160,6 +165,12 @@ private:
     return has_joint_state_ ? joint1_angle_ : 0.0;
   }
 
+  double current_joint2_angle()
+  {
+    std::lock_guard<std::mutex> lock(state_mutex_);
+    return has_joint_state_ ? joint2_angle_ : 0.0;
+  }
+
   void publish_command(double angle)
   {
     std_msgs::msg::Float64 command;
@@ -168,24 +179,25 @@ private:
     hold_angle_.store(angle);
   }
 
-  void publish_joint2_hold()
+  void publish_joint2_command(double angle)
   {
     std_msgs::msg::Float64 command;
-    command.data = 0.0;
+    command.data = angle;
     joint2_command_pub_->publish(command);
+    joint2_hold_angle_.store(angle);
   }
 
   void publish_hold_position()
   {
     publish_command(current_angle());
-    publish_joint2_hold();
+    publish_joint2_command(current_joint2_angle());
   }
 
   void publish_idle_hold()
   {
     if (!action_active_.load()) {
       publish_command(hold_angle_.load());
-      publish_joint2_hold();
+      publish_joint2_command(joint2_hold_angle_.load());
     }
   }
 
@@ -210,12 +222,15 @@ private:
   std::string approved_vin_;
   int control_period_ms_{50};
   double joint1_angle_{0.0};
+  double joint2_angle_{0.0};
+  double joint2_target_angle_{-0.70};
   bool has_joint_state_{false};
   std::mutex state_mutex_;
   std::atomic_bool authenticated_{false};
   std::atomic_bool is_danger_{false};
   std::atomic_bool action_active_{false};
   std::atomic<double> hold_angle_{0.0};
+  std::atomic<double> joint2_hold_angle_{0.0};
   rclcpp::CallbackGroup::SharedPtr scan_group_;
   rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr command_pub_;
   rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr joint2_command_pub_;
