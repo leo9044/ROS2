@@ -1,0 +1,7 @@
+{
+  "package_name": "acr_interfaces",
+  "non_idl_tuples": [
+    "/home/leo/acr_ws/src/acr_interfaces:srv/AuthVehicle.srv",
+    "/home/leo/acr_ws/src/acr_interfaces:action/ChargeRobot.action"
+  ]
+}

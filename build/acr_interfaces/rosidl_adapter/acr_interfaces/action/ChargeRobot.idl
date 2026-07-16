@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from acr_interfaces/action/ChargeRobot.action
+// generated code does not contain a copyright notice
+
+
+module acr_interfaces {
+  module action {
+    struct ChargeRobot_Goal {
+      double target_angle;
+    };
+    struct ChargeRobot_Result {
+      boolean success;
+    };
+    struct ChargeRobot_Feedback {
+      double current_percent;
+    };
+  };
+};

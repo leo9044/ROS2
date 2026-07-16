@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from acr_interfaces/srv/AuthVehicle.srv
+// generated code does not contain a copyright notice
+
+
+module acr_interfaces {
+  module srv {
+    struct AuthVehicle_Request {
+      string vin_number;
+    };
+    struct AuthVehicle_Response {
+      boolean is_approved;
+    };
+  };
+};

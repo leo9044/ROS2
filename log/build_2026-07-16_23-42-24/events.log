@@ -1,0 +1,378 @@
+[0.000000] (-) TimerEvent: {}
+[0.000337] (acr_interfaces) JobQueued: {'identifier': 'acr_interfaces', 'dependencies': OrderedDict()}
+[0.000905] (acr_interfaces) JobStarted: {'identifier': 'acr_interfaces'}
+[0.012791] (acr_interfaces) JobProgress: {'identifier': 'acr_interfaces', 'progress': 'cmake'}
+[0.013771] (acr_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/leo/acr_ws/src/acr_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/leo/acr_ws/install/acr_interfaces'], 'cwd': '/home/leo/acr_ws/build/acr_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/mnt/c/Users/임승하/AppData/Local/Programs/Microsoft VS Code', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'CODEX_CI': '1', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'leo', 'CODEX_INTERNAL_ORIGINATOR_OVERRIDE': 'codex_vscode', 'VSCODE_NLS_CONFIG': '{"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/leo/.vscode-server/bin/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/out/nls.messages.json","locale":"en","availableLanguages":{}}', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'VSCODE_WSL_EXT_LOCATION': '/mnt/c/Users/임승하/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'DEBUG': 'release', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/leo', 'VSCODE_RECONNECTION_GRACE_TIME': '10800000', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-18b74ec9-4fa4-4707-9e64-6421d4a5e8f3.sock', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'LC_CTYPE': 'C.UTF-8', 'NO_COLOR': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': '', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'CODEX_PERMISSION_PROFILE': ':workspace', 'APPLICATION_INSIGHTS_NO_STATSBEAT': 'true', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'leo', 'NAME': 'Code', 'WSL_INTEROP': '/run/WSL/629_interop', 'VSCODE_HANDLES_SIGPIPE': 'true', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'RUST_LOG': 'warn', 'TERM': 'dumb', 'PATH': '/home/leo/.codex/tmp/arg0/codex-arg0bt9cxr:/home/leo/.vscode-server/bin/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/bin/remote-cli:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemForLinux_2.7.10.0_x64__8wekyb3d8bbwe:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/임승하/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/임승하/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/leo/.vscode-server/extensions/openai.chatgpt-26.707.71524-linux-x64/bin/linux-x86_64', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'LANG': 'C.UTF-8', 'GH_PAGER': 'cat', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'ELECTRON_RUN_AS_NODE': '1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CODEX_THREAD_ID': '019f63e2-91ee-7431-917c-cc9edb3b3355', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'GIT_PAGER': 'cat', 'PWD': '/home/leo/acr_ws/build/acr_interfaces', 'LC_ALL': 'C.UTF-8', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'ELECTRON_RUN_AS_NODE/w:'}), 'shell': False}
+[0.100809] (-) TimerEvent: {}
+[0.201068] (-) TimerEvent: {}
+[0.301423] (-) TimerEvent: {}
+[0.308896] (acr_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.401610] (-) TimerEvent: {}
+[0.501848] (-) TimerEvent: {}
+[0.529420] (acr_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.602078] (-) TimerEvent: {}
+[0.620303] (acr_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.702315] (-) TimerEvent: {}
+[0.711888] (acr_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.718571] (acr_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.719360] (acr_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.720014] (acr_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.739811] (acr_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.802539] (-) TimerEvent: {}
+[0.837250] (acr_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.843747] (acr_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.844055] (acr_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.844666] (acr_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.877622] (acr_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.902874] (-) TimerEvent: {}
+[1.003180] (-) TimerEvent: {}
+[1.005602] (acr_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[1.103407] (-) TimerEvent: {}
+[1.146597] (acr_interfaces) StdoutLine: {'line': b'-- Found action_msgs: 2.0.4 (/opt/ros/jazzy/share/action_msgs/cmake)\n'}
+[1.203675] (-) TimerEvent: {}
+[1.254219] (acr_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[1.273734] (acr_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[1.301557] (acr_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.303870] (-) TimerEvent: {}
+[1.327453] (acr_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.404182] (-) TimerEvent: {}
+[1.409992] (acr_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[1.440508] (acr_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[1.504297] (-) TimerEvent: {}
+[1.604480] (-) TimerEvent: {}
+[1.704755] (-) TimerEvent: {}
+[1.804995] (-) TimerEvent: {}
+[1.905216] (-) TimerEvent: {}
+[1.934620] (acr_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.1 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[2.005414] (-) TimerEvent: {}
+[2.105656] (-) TimerEvent: {}
+[2.206130] (-) TimerEvent: {}
+[2.306398] (-) TimerEvent: {}
+[2.406672] (-) TimerEvent: {}
+[2.507055] (-) TimerEvent: {}
+[2.513413] (acr_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.607530] (-) TimerEvent: {}
+[2.707853] (-) TimerEvent: {}
+[2.733728] (acr_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.739106] (acr_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[2.808168] (-) TimerEvent: {}
+[2.852291] (acr_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[2.908288] (-) TimerEvent: {}
+[3.008507] (-) TimerEvent: {}
+[3.108733] (-) TimerEvent: {}
+[3.208931] (-) TimerEvent: {}
+[3.309322] (-) TimerEvent: {}
+[3.332718] (acr_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[3.394014] (acr_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[3.408929] (acr_interfaces) StdoutLine: {'line': b'-- Configuring done (3.3s)\n'}
+[3.409452] (-) TimerEvent: {}
+[3.447970] (acr_interfaces) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[3.457254] (acr_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/leo/acr_ws/build/acr_interfaces\n'}
+[3.465241] (acr_interfaces) CommandEnded: {'returncode': 0}
+[3.465816] (acr_interfaces) JobProgress: {'identifier': 'acr_interfaces', 'progress': 'build'}
+[3.466394] (acr_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/leo/acr_ws/build/acr_interfaces', '--', '-j12', '-l12'], 'cwd': '/home/leo/acr_ws/build/acr_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/mnt/c/Users/임승하/AppData/Local/Programs/Microsoft VS Code', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'CODEX_CI': '1', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'leo', 'CODEX_INTERNAL_ORIGINATOR_OVERRIDE': 'codex_vscode', 'VSCODE_NLS_CONFIG': '{"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/leo/.vscode-server/bin/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/out/nls.messages.json","locale":"en","availableLanguages":{}}', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'VSCODE_WSL_EXT_LOCATION': '/mnt/c/Users/임승하/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'DEBUG': 'release', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/leo', 'VSCODE_RECONNECTION_GRACE_TIME': '10800000', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-18b74ec9-4fa4-4707-9e64-6421d4a5e8f3.sock', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'LC_CTYPE': 'C.UTF-8', 'NO_COLOR': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': '', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'CODEX_PERMISSION_PROFILE': ':workspace', 'APPLICATION_INSIGHTS_NO_STATSBEAT': 'true', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'leo', 'NAME': 'Code', 'WSL_INTEROP': '/run/WSL/629_interop', 'VSCODE_HANDLES_SIGPIPE': 'true', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'RUST_LOG': 'warn', 'TERM': 'dumb', 'PATH': '/home/leo/.codex/tmp/arg0/codex-arg0bt9cxr:/home/leo/.vscode-server/bin/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/bin/remote-cli:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemForLinux_2.7.10.0_x64__8wekyb3d8bbwe:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/임승하/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/임승하/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/leo/.vscode-server/extensions/openai.chatgpt-26.707.71524-linux-x64/bin/linux-x86_64', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'LANG': 'C.UTF-8', 'GH_PAGER': 'cat', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'ELECTRON_RUN_AS_NODE': '1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CODEX_THREAD_ID': '019f63e2-91ee-7431-917c-cc9edb3b3355', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'GIT_PAGER': 'cat', 'PWD': '/home/leo/acr_ws/build/acr_interfaces', 'LC_ALL': 'C.UTF-8', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'ELECTRON_RUN_AS_NODE/w:'}), 'shell': False}
+[3.506392] (acr_interfaces) StdoutLine: {'line': b'[  2%] Generating Rust code for ROS interfaces\n'}
+[3.507564] (acr_interfaces) StdoutLine: {'line': b'[  4%] Generating type hashes for ROS interfaces\n'}
+[3.509632] (-) TimerEvent: {}
+[3.515157] (acr_interfaces) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_copy_acr_interfaces\n'}
+[3.609820] (-) TimerEvent: {}
+[3.710231] (-) TimerEvent: {}
+[3.713410] (acr_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[3.714500] (acr_interfaces) StdoutLine: {'line': b'creating acr_interfaces.egg-info\n'}
+[3.714782] (acr_interfaces) StdoutLine: {'line': b'[  4%] Built target acr_interfaces__rosidl_generator_type_description\n'}
+[3.724166] (acr_interfaces) StdoutLine: {'line': b'[  6%] Generating C code for ROS interfaces\n'}
+[3.733267] (acr_interfaces) StdoutLine: {'line': b'[  8%] Generating C++ code for ROS interfaces\n'}
+[3.733459] (acr_interfaces) StdoutLine: {'line': b'writing acr_interfaces.egg-info/PKG-INFO\n'}
+[3.733538] (acr_interfaces) StdoutLine: {'line': b'writing dependency_links to acr_interfaces.egg-info/dependency_links.txt\n'}
+[3.733579] (acr_interfaces) StdoutLine: {'line': b'writing top-level names to acr_interfaces.egg-info/top_level.txt\n'}
+[3.733623] (acr_interfaces) StdoutLine: {'line': b"writing manifest file 'acr_interfaces.egg-info/SOURCES.txt'\n"}
+[3.741304] (acr_interfaces) StdoutLine: {'line': b'[  8%] Built target acr_interfaces__rs\n'}
+[3.783592] (acr_interfaces) StdoutLine: {'line': b"reading manifest file 'acr_interfaces.egg-info/SOURCES.txt'\n"}
+[3.784061] (acr_interfaces) StdoutLine: {'line': b"writing manifest file 'acr_interfaces.egg-info/SOURCES.txt'\n"}
+[3.808795] (acr_interfaces) StdoutLine: {'line': b'[  8%] Built target ament_cmake_python_build_acr_interfaces_egg\n'}
+[3.810382] (-) TimerEvent: {}
+[3.910704] (-) TimerEvent: {}
+[4.010987] (-) TimerEvent: {}
+[4.080260] (acr_interfaces) StdoutLine: {'line': b'[  8%] Built target acr_interfaces__cpp\n'}
+[4.111228] (-) TimerEvent: {}
+[4.125164] (acr_interfaces) StdoutLine: {'line': b'[ 11%] Building C object CMakeFiles/acr_interfaces__rosidl_generator_c.dir/rosidl_generator_c/acr_interfaces/action/detail/charge_robot__description.c.o\n'}
+[4.125346] (acr_interfaces) StdoutLine: {'line': b'[ 13%] Building C object CMakeFiles/acr_interfaces__rosidl_generator_c.dir/rosidl_generator_c/acr_interfaces/action/detail/charge_robot__type_support.c.o\n'}
+[4.126046] (acr_interfaces) StdoutLine: {'line': b'[ 17%] Building C object CMakeFiles/acr_interfaces__rosidl_generator_c.dir/rosidl_generator_c/acr_interfaces/srv/detail/auth_vehicle__type_support.c.o\n'}
+[4.126298] (acr_interfaces) StdoutLine: {'line': b'[ 17%] Building C object CMakeFiles/acr_interfaces__rosidl_generator_c.dir/rosidl_generator_c/acr_interfaces/srv/detail/auth_vehicle__functions.c.o\n'}
+[4.126352] (acr_interfaces) StdoutLine: {'line': b'[ 20%] Building C object CMakeFiles/acr_interfaces__rosidl_generator_c.dir/rosidl_generator_c/acr_interfaces/srv/detail/auth_vehicle__description.c.o\n'}
+[4.126658] (acr_interfaces) StdoutLine: {'line': b'[ 22%] Building C object CMakeFiles/acr_interfaces__rosidl_generator_c.dir/rosidl_generator_c/acr_interfaces/action/detail/charge_robot__functions.c.o\n'}
+[4.211506] (-) TimerEvent: {}
+[4.268145] (acr_interfaces) StdoutLine: {'line': b'[ 24%] Linking C shared library libacr_interfaces__rosidl_generator_c.so\n'}
+[4.311871] (-) TimerEvent: {}
+[4.317476] (acr_interfaces) StdoutLine: {'line': b'[ 24%] Built target acr_interfaces__rosidl_generator_c\n'}
+[4.326876] (acr_interfaces) StdoutLine: {'line': b'[ 26%] Generating C++ type support dispatch for ROS interfaces\n'}
+[4.327075] (acr_interfaces) StdoutLine: {'line': b'[ 28%] Generating C type support dispatch for ROS interfaces\n'}
+[4.327269] (acr_interfaces) StdoutLine: {'line': b'[ 31%] Generating C introspection for ROS interfaces\n'}
+[4.327381] (acr_interfaces) StdoutLine: {'line': b'[ 33%] Generating C type support for eProsima Fast-RTPS\n'}
+[4.332185] (acr_interfaces) StdoutLine: {'line': b'[ 35%] Generating C++ type support for eProsima Fast-RTPS\n'}
+[4.332332] (acr_interfaces) StdoutLine: {'line': b'[ 37%] Generating C++ introspection for ROS interfaces\n'}
+[4.412202] (-) TimerEvent: {}
+[4.512368] (-) TimerEvent: {}
+[4.609345] (acr_interfaces) StdoutLine: {'line': b'[ 42%] Building CXX object CMakeFiles/acr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/acr_interfaces/action/charge_robot__type_support.cpp.o\n'}
+[4.609515] (acr_interfaces) StdoutLine: {'line': b'[ 42%] Building CXX object CMakeFiles/acr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/acr_interfaces/srv/auth_vehicle__type_support.cpp.o\n'}
+[4.612492] (-) TimerEvent: {}
+[4.640182] (acr_interfaces) StdoutLine: {'line': b'[ 44%] Building CXX object CMakeFiles/acr_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/acr_interfaces/srv/auth_vehicle__type_support.cpp.o\n'}
+[4.640359] (acr_interfaces) StdoutLine: {'line': b'[ 46%] Building CXX object CMakeFiles/acr_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/acr_interfaces/action/charge_robot__type_support.cpp.o\n'}
+[4.662122] (acr_interfaces) StdoutLine: {'line': b'[ 51%] Building CXX object CMakeFiles/acr_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/acr_interfaces/action/detail/charge_robot__type_support.cpp.o\n'}
+[4.662279] (acr_interfaces) StdoutLine: {'line': b'[ 51%] Building CXX object CMakeFiles/acr_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/acr_interfaces/srv/detail/auth_vehicle__type_support.cpp.o\n'}
+[4.677532] (acr_interfaces) StdoutLine: {'line': b'[ 53%] Linking CXX shared library libacr_interfaces__rosidl_typesupport_c.so\n'}
+[4.707516] (acr_interfaces) StdoutLine: {'line': b'[ 55%] Building C object CMakeFiles/acr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/acr_interfaces/action/detail/charge_robot__type_support.c.o\n'}
+[4.707838] (acr_interfaces) StdoutLine: {'line': b'[ 57%] Building C object CMakeFiles/acr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/acr_interfaces/srv/detail/auth_vehicle__type_support.c.o\n'}
+[4.712638] (-) TimerEvent: {}
+[4.748751] (acr_interfaces) StdoutLine: {'line': b'[ 57%] Built target acr_interfaces__rosidl_typesupport_c\n'}
+[4.779687] (acr_interfaces) StdoutLine: {'line': b'[ 60%] Linking C shared library libacr_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[4.812823] (-) TimerEvent: {}
+[4.826089] (acr_interfaces) StdoutLine: {'line': b'[ 60%] Built target acr_interfaces__rosidl_typesupport_introspection_c\n'}
+[4.881548] (acr_interfaces) StdoutLine: {'line': b'[ 64%] Building CXX object CMakeFiles/acr_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/acr_interfaces/srv/detail/dds_fastrtps/auth_vehicle__type_support.cpp.o\n'}
+[4.881759] (acr_interfaces) StdoutLine: {'line': b'[ 64%] Building CXX object CMakeFiles/acr_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/acr_interfaces/action/detail/dds_fastrtps/charge_robot__type_support.cpp.o\n'}
+[4.913606] (acr_interfaces) StdoutLine: {'line': b'[ 66%] Building CXX object CMakeFiles/acr_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/acr_interfaces/action/detail/charge_robot__type_support_c.cpp.o\n'}
+[4.913788] (-) TimerEvent: {}
+[4.914700] (acr_interfaces) StdoutLine: {'line': b'[ 68%] Building CXX object CMakeFiles/acr_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/acr_interfaces/srv/detail/auth_vehicle__type_support_c.cpp.o\n'}
+[5.014017] (-) TimerEvent: {}
+[5.114354] (-) TimerEvent: {}
+[5.214898] (-) TimerEvent: {}
+[5.315279] (-) TimerEvent: {}
+[5.391649] (acr_interfaces) StdoutLine: {'line': b'[ 71%] Linking CXX shared library libacr_interfaces__rosidl_typesupport_cpp.so\n'}
+[5.415561] (-) TimerEvent: {}
+[5.466171] (acr_interfaces) StdoutLine: {'line': b'[ 73%] Linking CXX shared library libacr_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[5.468867] (acr_interfaces) StdoutLine: {'line': b'[ 75%] Linking CXX shared library libacr_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[5.470614] (acr_interfaces) StdoutLine: {'line': b'[ 75%] Built target acr_interfaces__rosidl_typesupport_cpp\n'}
+[5.515895] (-) TimerEvent: {}
+[5.546714] (acr_interfaces) StdoutLine: {'line': b'[ 75%] Built target acr_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[5.552172] (acr_interfaces) StdoutLine: {'line': b'[ 75%] Built target acr_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[5.616342] (-) TimerEvent: {}
+[5.716525] (-) TimerEvent: {}
+[5.777860] (acr_interfaces) StdoutLine: {'line': b'[ 77%] Linking CXX shared library libacr_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[5.816697] (-) TimerEvent: {}
+[5.849816] (acr_interfaces) StdoutLine: {'line': b'[ 77%] Built target acr_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[5.865859] (acr_interfaces) StdoutLine: {'line': b'[ 77%] Built target acr_interfaces\n'}
+[5.881457] (acr_interfaces) StdoutLine: {'line': b'[ 80%] Generating Python code for ROS interfaces\n'}
+[5.916848] (-) TimerEvent: {}
+[6.017050] (-) TimerEvent: {}
+[6.117441] (-) TimerEvent: {}
+[6.217680] (-) TimerEvent: {}
+[6.317917] (-) TimerEvent: {}
+[6.418932] (-) TimerEvent: {}
+[6.429875] (acr_interfaces) StdoutLine: {'line': b'[ 80%] Built target acr_interfaces__py\n'}
+[6.445667] (acr_interfaces) StdoutLine: {'line': b'[ 84%] Building C object CMakeFiles/acr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/acr_interfaces/action/_charge_robot_s.c.o\n'}
+[6.445873] (acr_interfaces) StdoutLine: {'line': b'[ 84%] Building C object CMakeFiles/acr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/acr_interfaces/srv/_auth_vehicle_s.c.o\n'}
+[6.519189] (-) TimerEvent: {}
+[6.619515] (-) TimerEvent: {}
+[6.634375] (acr_interfaces) StdoutLine: {'line': b'[ 86%] Linking C shared library libacr_interfaces__rosidl_generator_py.so\n'}
+[6.680650] (acr_interfaces) StdoutLine: {'line': b'[ 86%] Built target acr_interfaces__rosidl_generator_py\n'}
+[6.697824] (acr_interfaces) StdoutLine: {'line': b'[ 88%] Building C object CMakeFiles/acr_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/acr_interfaces/_acr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\n'}
+[6.698640] (acr_interfaces) StdoutLine: {'line': b'[ 91%] Building C object CMakeFiles/acr_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/acr_interfaces/_acr_interfaces_s.ep.rosidl_typesupport_c.c.o\n'}
+[6.699041] (acr_interfaces) StdoutLine: {'line': b'[ 93%] Building C object CMakeFiles/acr_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/acr_interfaces/_acr_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\n'}
+[6.719812] (-) TimerEvent: {}
+[6.806986] (acr_interfaces) StdoutLine: {'line': b'[ 95%] Linking C shared module rosidl_generator_py/acr_interfaces/acr_interfaces_s__rosidl_typesupport_c.so\n'}
+[6.807123] (acr_interfaces) StdoutLine: {'line': b'[ 97%] Linking C shared module rosidl_generator_py/acr_interfaces/acr_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[6.817347] (acr_interfaces) StdoutLine: {'line': b'[100%] Linking C shared module rosidl_generator_py/acr_interfaces/acr_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[6.820072] (-) TimerEvent: {}
+[6.846516] (acr_interfaces) StdoutLine: {'line': b'[100%] Built target acr_interfaces_s__rosidl_typesupport_c\n'}
+[6.846695] (acr_interfaces) StdoutLine: {'line': b'[100%] Built target acr_interfaces_s__rosidl_typesupport_introspection_c\n'}
+[6.855212] (acr_interfaces) StdoutLine: {'line': b'[100%] Built target acr_interfaces_s__rosidl_typesupport_fastrtps_c\n'}
+[6.863299] (acr_interfaces) CommandEnded: {'returncode': 0}
+[6.864037] (acr_interfaces) JobProgress: {'identifier': 'acr_interfaces', 'progress': 'install'}
+[6.870600] (acr_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/leo/acr_ws/build/acr_interfaces'], 'cwd': '/home/leo/acr_ws/build/acr_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/mnt/c/Users/임승하/AppData/Local/Programs/Microsoft VS Code', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'CODEX_CI': '1', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'leo', 'CODEX_INTERNAL_ORIGINATOR_OVERRIDE': 'codex_vscode', 'VSCODE_NLS_CONFIG': '{"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/leo/.vscode-server/bin/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/out/nls.messages.json","locale":"en","availableLanguages":{}}', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'VSCODE_WSL_EXT_LOCATION': '/mnt/c/Users/임승하/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'DEBUG': 'release', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/leo', 'VSCODE_RECONNECTION_GRACE_TIME': '10800000', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-18b74ec9-4fa4-4707-9e64-6421d4a5e8f3.sock', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'LC_CTYPE': 'C.UTF-8', 'NO_COLOR': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': '', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'CODEX_PERMISSION_PROFILE': ':workspace', 'APPLICATION_INSIGHTS_NO_STATSBEAT': 'true', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'leo', 'NAME': 'Code', 'WSL_INTEROP': '/run/WSL/629_interop', 'VSCODE_HANDLES_SIGPIPE': 'true', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'RUST_LOG': 'warn', 'TERM': 'dumb', 'PATH': '/home/leo/.codex/tmp/arg0/codex-arg0bt9cxr:/home/leo/.vscode-server/bin/4fe60c8b1cdac1c4c174f2fb180d0d758272d713/bin/remote-cli:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemForLinux_2.7.10.0_x64__8wekyb3d8bbwe:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/임승하/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/임승하/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/leo/.vscode-server/extensions/openai.chatgpt-26.707.71524-linux-x64/bin/linux-x86_64', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'LANG': 'C.UTF-8', 'GH_PAGER': 'cat', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'ELECTRON_RUN_AS_NODE': '1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CODEX_THREAD_ID': '019f63e2-91ee-7431-917c-cc9edb3b3355', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'GIT_PAGER': 'cat', 'PWD': '/home/leo/acr_ws/build/acr_interfaces', 'LC_ALL': 'C.UTF-8', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'ELECTRON_RUN_AS_NODE/w:'}), 'shell': False}
+[6.877180] (acr_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.877634] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/ament_index/resource_index/rosidl_interfaces/acr_interfaces\n'}
+[6.877926] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/srv/AuthVehicle.json\n'}
+[6.878115] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/action/ChargeRobot.json\n'}
+[6.878234] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces\n'}
+[6.878497] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action\n'}
+[6.878640] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail\n'}
+[6.878926] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__functions.h\n'}
+[6.879039] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__functions.c\n'}
+[6.879240] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__type_support.c\n'}
+[6.879297] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__type_support.h\n'}
+[6.879400] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__description.c\n'}
+[6.879808] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__struct.h\n'}
+[6.879986] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/charge_robot.h\n'}
+[6.880113] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv\n'}
+[6.880285] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail\n'}
+[6.880426] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__type_support.h\n'}
+[6.880630] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__functions.h\n'}
+[6.880739] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__struct.h\n'}
+[6.880845] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__description.c\n'}
+[6.880946] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__functions.c\n'}
+[6.881189] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__type_support.c\n'}
+[6.881259] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/auth_vehicle.h\n'}
+[6.881430] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/msg\n'}
+[6.881873] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[6.881921] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/environment/library_path.sh\n'}
+[6.882042] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/environment/library_path.dsv\n'}
+[6.882183] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_generator_c.so\n'}
+[6.882290] (acr_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_generator_c.so" to ""\n'}
+[6.882785] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces\n'}
+[6.882892] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action\n'}
+[6.882994] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail\n'}
+[6.883096] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__rosidl_typesupport_fastrtps_c.h\n'}
+[6.883199] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv\n'}
+[6.883301] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail\n'}
+[6.883402] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__rosidl_typesupport_fastrtps_c.h\n'}
+[6.883504] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/msg\n'}
+[6.883606] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[6.883708] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[6.883810] (acr_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[6.883913] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces\n'}
+[6.884206] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action\n'}
+[6.884279] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail\n'}
+[6.884384] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__builder.hpp\n'}
+[6.884608] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__type_support.hpp\n'}
+[6.884696] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__traits.hpp\n'}
+[6.884798] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__struct.hpp\n'}
+[6.884901] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/charge_robot.hpp\n'}
+[6.885003] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv\n'}
+[6.885105] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail\n'}
+[6.885206] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__struct.hpp\n'}
+[6.885309] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__builder.hpp\n'}
+[6.885450] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__type_support.hpp\n'}
+[6.885620] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__traits.hpp\n'}
+[6.885822] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/auth_vehicle.hpp\n'}
+[6.885972] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/msg\n'}
+[6.886110] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[6.886248] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces\n'}
+[6.886387] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action\n'}
+[6.886547] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail\n'}
+[6.886695] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.886840] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/dds_fastrtps\n'}
+[6.886981] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv\n'}
+[6.887126] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail\n'}
+[6.887472] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.887588] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/dds_fastrtps\n'}
+[6.887692] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/msg\n'}
+[6.887798] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[6.887900] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[6.888001] (acr_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[6.888103] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces\n'}
+[6.888391] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action\n'}
+[6.888470] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail\n'}
+[6.888507] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__type_support.c\n'}
+[6.888542] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__rosidl_typesupport_introspection_c.h\n'}
+[6.888578] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv\n'}
+[6.888609] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail\n'}
+[6.888639] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__rosidl_typesupport_introspection_c.h\n'}
+[6.888671] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__type_support.c\n'}
+[6.888701] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/msg\n'}
+[6.888732] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[6.888762] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[6.888793] (acr_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[6.888823] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_typesupport_c.so\n'}
+[6.888859] (acr_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[6.888890] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces\n'}
+[6.888919] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action\n'}
+[6.888949] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail\n'}
+[6.888980] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__type_support.cpp\n'}
+[6.889011] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.889042] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv\n'}
+[6.889072] (acr_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail\n'}
+[6.889102] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__type_support.cpp\n'}
+[6.889142] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.889187] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[6.889218] (acr_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[6.889250] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_typesupport_cpp.so\n'}
+[6.889286] (acr_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[6.889317] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/environment/pythonpath.sh\n'}
+[6.889346] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/environment/pythonpath.dsv\n'}
+[6.889379] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces-0.1.0-py3.12.egg-info\n'}
+[6.889410] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces-0.1.0-py3.12.egg-info/dependency_links.txt\n'}
+[6.889440] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces-0.1.0-py3.12.egg-info/PKG-INFO\n'}
+[6.889471] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces-0.1.0-py3.12.egg-info/SOURCES.txt\n'}
+[6.889500] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces-0.1.0-py3.12.egg-info/top_level.txt\n'}
+[6.889539] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces\n'}
+[6.889585] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/action\n'}
+[6.889616] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/action/_charge_robot_s.c\n'}
+[6.889647] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/action/__init__.py\n'}
+[6.889678] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/action/_charge_robot.py\n'}
+[6.889725] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/__init__.py\n'}
+[6.889771] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/_acr_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[6.889806] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/_acr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[6.889840] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/acr_interfaces_s__rosidl_typesupport_c.so\n'}
+[6.889879] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/_acr_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[6.889918] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/srv\n'}
+[6.889955] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/srv/_auth_vehicle_s.c\n'}
+[6.889986] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/srv/_auth_vehicle.py\n'}
+[6.890017] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/srv/__init__.py\n'}
+[6.890055] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/acr_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[6.890093] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/acr_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[6.920262] (-) TimerEvent: {}
+[6.931771] (acr_interfaces) StdoutLine: {'line': b"Listing '/home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces'...\n"}
+[6.931904] (acr_interfaces) StdoutLine: {'line': b"Compiling '/home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/__init__.py'...\n"}
+[6.931946] (acr_interfaces) StdoutLine: {'line': b"Listing '/home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/action'...\n"}
+[6.931981] (acr_interfaces) StdoutLine: {'line': b"Compiling '/home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/action/__init__.py'...\n"}
+[6.932015] (acr_interfaces) StdoutLine: {'line': b"Compiling '/home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/action/_charge_robot.py'...\n"}
+[6.932048] (acr_interfaces) StdoutLine: {'line': b"Listing '/home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/srv'...\n"}
+[6.932081] (acr_interfaces) StdoutLine: {'line': b"Compiling '/home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/srv/__init__.py'...\n"}
+[6.932113] (acr_interfaces) StdoutLine: {'line': b"Compiling '/home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/srv/_auth_vehicle.py'...\n"}
+[6.937443] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/acr_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[6.937778] (acr_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/acr_interfaces_s__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[6.937937] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/acr_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[6.938126] (acr_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/acr_interfaces_s__rosidl_typesupport_introspection_c.so" to ""\n'}
+[6.938324] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/acr_interfaces_s__rosidl_typesupport_c.so\n'}
+[6.938460] (acr_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/acr_interfaces_s__rosidl_typesupport_c.so" to ""\n'}
+[6.938676] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_generator_py.so\n'}
+[6.938816] (acr_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_generator_py.so" to ""\n'}
+[6.938951] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/ament_index/resource_index/rust_packages/acr_interfaces\n'}
+[6.939141] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust\n'}
+[6.939403] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust/Cargo.toml\n'}
+[6.939551] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust/build.rs\n'}
+[6.939687] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust/src\n'}
+[6.939820] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust/src/action\n'}
+[6.939958] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust/src/action/rmw.rs\n'}
+[6.940131] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust/src/srv\n'}
+[6.940314] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust/src/srv/rmw.rs\n'}
+[6.940423] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust/src/srv.rs\n'}
+[6.940525] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust/src/lib.rs\n'}
+[6.940627] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust/src/action.rs\n'}
+[6.941155] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/srv/AuthVehicle.idl\n'}
+[6.941241] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/action/ChargeRobot.idl\n'}
+[6.941346] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/srv/AuthVehicle.srv\n'}
+[6.941449] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/action/ChargeRobot.action\n'}
+[6.941551] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/ament_index/resource_index/package_run_dependencies/acr_interfaces\n'}
+[6.941655] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/ament_index/resource_index/parent_prefix_path/acr_interfaces\n'}
+[6.941758] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/environment/ament_prefix_path.sh\n'}
+[6.941861] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/environment/ament_prefix_path.dsv\n'}
+[6.941967] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/environment/path.sh\n'}
+[6.942070] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/environment/path.dsv\n'}
+[6.942173] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/local_setup.bash\n'}
+[6.942276] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/local_setup.sh\n'}
+[6.942379] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/local_setup.zsh\n'}
+[6.942486] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/local_setup.dsv\n'}
+[6.942588] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/package.dsv\n'}
+[6.942690] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/ament_index/resource_index/packages/acr_interfaces\n'}
+[6.942791] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/export_acr_interfaces__rosidl_generator_cExport.cmake\n'}
+[6.942894] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/export_acr_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[6.943014] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/export_acr_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[6.943117] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/export_acr_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[6.943381] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/export_acr_interfaces__rosidl_generator_cppExport.cmake\n'}
+[6.943442] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/export_acr_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[6.943550] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/export_acr_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[6.943656] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/acr_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[6.943755] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/acr_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[6.943855] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/acr_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[6.943954] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/acr_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[6.944058] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/acr_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[6.944434] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/acr_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[6.944587] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/acr_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[6.944727] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/acr_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[6.945027] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/export_acr_interfaces__rosidl_generator_pyExport.cmake\n'}
+[6.945175] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/export_acr_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[6.945322] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[6.945465] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[6.945605] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[6.945745] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[6.945882] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[6.946019] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[6.946159] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[6.946298] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/rosidl_cmake_aggregate_target-extras.cmake\n'}
+[6.946431] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/acr_interfacesConfig.cmake\n'}
+[6.946558] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/acr_interfacesConfig-version.cmake\n'}
+[6.946654] (acr_interfaces) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/package.xml\n'}
+[6.946960] (acr_interfaces) CommandEnded: {'returncode': 0}
+[6.971404] (acr_interfaces) JobEnded: {'identifier': 'acr_interfaces', 'rc': 0}
+[6.971971] (-) EventReactorShutdown: {}

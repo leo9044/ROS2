@@ -1,0 +1,61 @@
+[0.028s] Invoking command in '/home/leo/acr_ws/build/acr_core': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/leo/acr_ws/build/acr_core -- -j12 -l12
+[0.050s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.235s] -- Found acr_interfaces: 0.1.0 (/home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake)
+[0.308s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.325s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.343s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.363s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.446s] -- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.518s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.524s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.628s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.668s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.699s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.824s] -- Found rclcpp_action: 28.1.21 (/opt/ros/jazzy/share/rclcpp_action/cmake)
+[0.843s] -- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.019s] -- Configuring done (1.0s)
+[1.033s] -- Generating done (0.0s)
+[1.038s] -- Build files have been written to: /home/leo/acr_ws/build/acr_core
+[1.069s] [ 25%] Building CXX object CMakeFiles/car_node.dir/src/car_node.cpp.o
+[1.070s] [ 50%] Building CXX object CMakeFiles/acr_node.dir/src/acr_node.cpp.o
+[6.216s] [ 75%] Linking CXX executable car_node
+[6.430s] [ 75%] Built target car_node
+[12.249s] [100%] Linking CXX executable acr_node
+[12.664s] [100%] Built target acr_node
+[12.673s] Invoked command in '/home/leo/acr_ws/build/acr_core' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/leo/acr_ws/build/acr_core -- -j12 -l12
+[12.681s] Invoking command in '/home/leo/acr_ws/build/acr_core': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/leo/acr_ws/build/acr_core
+[12.689s] -- Install configuration: ""
+[12.689s] -- Installing: /home/leo/acr_ws/install/acr_core/lib/acr_core/acr_node
+[12.695s] -- Set non-toolchain portion of runtime path of "/home/leo/acr_ws/install/acr_core/lib/acr_core/acr_node" to ""
+[12.695s] -- Installing: /home/leo/acr_ws/install/acr_core/lib/acr_core/car_node
+[12.697s] -- Set non-toolchain portion of runtime path of "/home/leo/acr_ws/install/acr_core/lib/acr_core/car_node" to ""
+[12.697s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/config
+[12.697s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/config/.gitkeep
+[12.697s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/config/bridge.yaml
+[12.698s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/launch
+[12.698s] -- Installing: /home/leo/acr_ws/install/acr_core/share/acr_core/launch/acr_system.launch.py
+[12.698s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/launch/.gitkeep
+[12.698s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/launch/spawn_obstacle.launch.py
+[12.698s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/models
+[12.698s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/models/ev_vehicle.sdf
+[12.698s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/models/box_obstacle.sdf
+[12.698s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/urdf
+[12.698s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/urdf/acr_rrbot.urdf
+[12.698s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/worlds
+[12.698s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/worlds/acr_empty.sdf
+[12.698s] -- Installing: /home/leo/acr_ws/install/acr_core/share/ament_index/resource_index/package_run_dependencies/acr_core
+[12.699s] -- Installing: /home/leo/acr_ws/install/acr_core/share/ament_index/resource_index/parent_prefix_path/acr_core
+[12.700s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/environment/ament_prefix_path.sh
+[12.700s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/environment/ament_prefix_path.dsv
+[12.701s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/environment/path.sh
+[12.701s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/environment/path.dsv
+[12.701s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/local_setup.bash
+[12.701s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/local_setup.sh
+[12.702s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/local_setup.zsh
+[12.702s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/local_setup.dsv
+[12.702s] -- Installing: /home/leo/acr_ws/install/acr_core/share/acr_core/package.dsv
+[12.703s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/ament_index/resource_index/packages/acr_core
+[12.703s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/cmake/acr_coreConfig.cmake
+[12.703s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/cmake/acr_coreConfig-version.cmake
+[12.703s] -- Installing: /home/leo/acr_ws/install/acr_core/share/acr_core/package.xml
+[12.703s] Invoked command in '/home/leo/acr_ws/build/acr_core' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/leo/acr_ws/build/acr_core

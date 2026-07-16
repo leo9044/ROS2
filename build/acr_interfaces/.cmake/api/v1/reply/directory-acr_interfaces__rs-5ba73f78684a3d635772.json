@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "acr_interfaces__rs",
+		"source" : "/home/leo/acr_ws/build/acr_interfaces/acr_interfaces__rs"
+	}
+}
