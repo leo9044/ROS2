@@ -1,0 +1,205 @@
+[0.073s] Invoking command in '/home/leo/acr_ws/build/acr_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/leo/acr_ws/build/acr_interfaces -- -j12 -l12
+[0.195s] [  2%] Built target acr_interfaces__rosidl_generator_type_description
+[0.199s] [  4%] Built target acr_interfaces__rs
+[0.214s] [  4%] Built target ament_cmake_python_copy_acr_interfaces
+[0.216s] [  6%] Built target acr_interfaces__cpp
+[0.221s] [ 24%] Built target acr_interfaces__rosidl_generator_c
+[0.307s] [ 46%] Built target acr_interfaces__rosidl_typesupport_cpp
+[0.307s] [ 51%] Built target acr_interfaces__rosidl_typesupport_c
+[0.307s] [ 48%] Built target acr_interfaces__rosidl_typesupport_introspection_c
+[0.308s] [ 60%] Built target acr_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.309s] [ 77%] Built target acr_interfaces__rosidl_typesupport_fastrtps_c
+[0.309s] [ 77%] Built target acr_interfaces__rosidl_typesupport_introspection_cpp
+[0.833s] [ 77%] Built target acr_interfaces
+[0.898s] running egg_info
+[0.911s] [ 80%] Built target acr_interfaces__py
+[0.917s] writing acr_interfaces.egg-info/PKG-INFO
+[0.917s] writing dependency_links to acr_interfaces.egg-info/dependency_links.txt
+[0.918s] writing top-level names to acr_interfaces.egg-info/top_level.txt
+[1.005s] [ 86%] Built target acr_interfaces__rosidl_generator_py
+[1.022s] reading manifest file 'acr_interfaces.egg-info/SOURCES.txt'
+[1.077s] writing manifest file 'acr_interfaces.egg-info/SOURCES.txt'
+[1.102s] [ 86%] Built target ament_cmake_python_build_acr_interfaces_egg
+[1.153s] [ 91%] Built target acr_interfaces_s__rosidl_typesupport_fastrtps_c
+[1.225s] [ 95%] Built target acr_interfaces_s__rosidl_typesupport_introspection_c
+[1.227s] [100%] Built target acr_interfaces_s__rosidl_typesupport_c
+[1.237s] Invoked command in '/home/leo/acr_ws/build/acr_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/leo/acr_ws/build/acr_interfaces -- -j12 -l12
+[1.312s] Invoking command in '/home/leo/acr_ws/build/acr_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/leo/acr_ws/build/acr_interfaces
+[1.319s] -- Install configuration: ""
+[1.319s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/ament_index/resource_index/rosidl_interfaces/acr_interfaces
+[1.320s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/srv/AuthVehicle.json
+[1.320s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/action/ChargeRobot.json
+[1.321s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces
+[1.321s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action
+[1.322s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail
+[1.322s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__functions.h
+[1.323s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__functions.c
+[1.323s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__type_support.c
+[1.323s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__type_support.h
+[1.324s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__description.c
+[1.324s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__struct.h
+[1.324s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/charge_robot.h
+[1.324s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv
+[1.324s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail
+[1.325s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__type_support.h
+[1.325s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__functions.h
+[1.325s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__struct.h
+[1.325s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__description.c
+[1.325s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__functions.c
+[1.325s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__type_support.c
+[1.325s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/auth_vehicle.h
+[1.325s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/msg
+[1.326s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/msg/rosidl_generator_c__visibility_control.h
+[1.326s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/environment/library_path.sh
+[1.326s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/environment/library_path.dsv
+[1.326s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_generator_c.so
+[1.326s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces
+[1.326s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action
+[1.327s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail
+[1.327s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__rosidl_typesupport_fastrtps_c.h
+[1.327s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv
+[1.327s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail
+[1.327s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__rosidl_typesupport_fastrtps_c.h
+[1.327s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/msg
+[1.327s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.327s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_typesupport_fastrtps_c.so
+[1.328s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces
+[1.328s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action
+[1.328s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail
+[1.328s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__builder.hpp
+[1.328s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__type_support.hpp
+[1.328s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__traits.hpp
+[1.329s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__struct.hpp
+[1.329s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/charge_robot.hpp
+[1.329s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv
+[1.329s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail
+[1.329s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__struct.hpp
+[1.329s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__builder.hpp
+[1.329s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__type_support.hpp
+[1.329s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__traits.hpp
+[1.330s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/auth_vehicle.hpp
+[1.330s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/msg
+[1.330s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.330s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces
+[1.330s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action
+[1.330s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail
+[1.330s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__rosidl_typesupport_fastrtps_cpp.hpp
+[1.331s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/dds_fastrtps
+[1.331s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv
+[1.331s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail
+[1.331s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__rosidl_typesupport_fastrtps_cpp.hpp
+[1.331s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/dds_fastrtps
+[1.331s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/msg
+[1.331s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.332s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[1.332s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces
+[1.332s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action
+[1.332s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail
+[1.332s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__type_support.c
+[1.332s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__rosidl_typesupport_introspection_c.h
+[1.332s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv
+[1.333s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail
+[1.333s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__rosidl_typesupport_introspection_c.h
+[1.333s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__type_support.c
+[1.333s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/msg
+[1.333s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.333s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_typesupport_introspection_c.so
+[1.333s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_typesupport_c.so
+[1.334s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces
+[1.334s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action
+[1.334s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail
+[1.334s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__type_support.cpp
+[1.334s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/action/detail/charge_robot__rosidl_typesupport_introspection_cpp.hpp
+[1.334s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv
+[1.334s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail
+[1.334s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__type_support.cpp
+[1.335s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/include/acr_interfaces/acr_interfaces/srv/detail/auth_vehicle__rosidl_typesupport_introspection_cpp.hpp
+[1.335s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_typesupport_introspection_cpp.so
+[1.335s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_typesupport_cpp.so
+[1.335s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/environment/pythonpath.sh
+[1.335s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/environment/pythonpath.dsv
+[1.335s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces-0.1.0-py3.12.egg-info
+[1.336s] -- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces-0.1.0-py3.12.egg-info/dependency_links.txt
+[1.336s] -- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces-0.1.0-py3.12.egg-info/PKG-INFO
+[1.336s] -- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces-0.1.0-py3.12.egg-info/SOURCES.txt
+[1.336s] -- Installing: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces-0.1.0-py3.12.egg-info/top_level.txt
+[1.336s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces
+[1.337s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/action
+[1.337s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/action/_charge_robot_s.c
+[1.337s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/action/__init__.py
+[1.337s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/action/_charge_robot.py
+[1.338s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/__init__.py
+[1.338s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/_acr_interfaces_s.ep.rosidl_typesupport_c.c
+[1.338s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/_acr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.338s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/acr_interfaces_s__rosidl_typesupport_c.so
+[1.339s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/_acr_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[1.339s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/srv
+[1.339s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/srv/_auth_vehicle_s.c
+[1.339s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/srv/_auth_vehicle.py
+[1.339s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/srv/__init__.py
+[1.340s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/acr_interfaces_s__rosidl_typesupport_introspection_c.so
+[1.340s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/acr_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[1.363s] Listing '/home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces'...
+[1.363s] Listing '/home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/action'...
+[1.363s] Listing '/home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/srv'...
+[1.369s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/acr_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[1.370s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/acr_interfaces_s__rosidl_typesupport_introspection_c.so
+[1.371s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages/acr_interfaces/acr_interfaces_s__rosidl_typesupport_c.so
+[1.372s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/lib/libacr_interfaces__rosidl_generator_py.so
+[1.373s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/ament_index/resource_index/rust_packages/acr_interfaces
+[1.373s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust
+[1.373s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust/Cargo.toml
+[1.373s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust/build.rs
+[1.373s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust/src
+[1.373s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust/src/action
+[1.374s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust/src/action/rmw.rs
+[1.374s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust/src/srv
+[1.374s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust/src/srv/rmw.rs
+[1.374s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust/src/srv.rs
+[1.374s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust/src/lib.rs
+[1.374s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/rust/src/action.rs
+[1.374s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/srv/AuthVehicle.idl
+[1.374s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/action/ChargeRobot.idl
+[1.375s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/srv/AuthVehicle.srv
+[1.375s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/action/ChargeRobot.action
+[1.375s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/ament_index/resource_index/package_run_dependencies/acr_interfaces
+[1.375s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/ament_index/resource_index/parent_prefix_path/acr_interfaces
+[1.375s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/environment/ament_prefix_path.sh
+[1.375s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/environment/ament_prefix_path.dsv
+[1.375s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/environment/path.sh
+[1.375s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/environment/path.dsv
+[1.375s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/local_setup.bash
+[1.375s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/local_setup.sh
+[1.375s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/local_setup.zsh
+[1.375s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/local_setup.dsv
+[1.376s] -- Installing: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/package.dsv
+[1.376s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/ament_index/resource_index/packages/acr_interfaces
+[1.376s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/export_acr_interfaces__rosidl_generator_cExport.cmake
+[1.376s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/export_acr_interfaces__rosidl_generator_cExport-noconfig.cmake
+[1.376s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/export_acr_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[1.376s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/export_acr_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[1.376s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/export_acr_interfaces__rosidl_generator_cppExport.cmake
+[1.377s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/export_acr_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.377s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/export_acr_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[1.377s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/acr_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[1.377s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/acr_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.378s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/acr_interfaces__rosidl_typesupport_cExport.cmake
+[1.378s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/acr_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[1.379s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/acr_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[1.379s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/acr_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.380s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/acr_interfaces__rosidl_typesupport_cppExport.cmake
+[1.380s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/acr_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[1.380s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/export_acr_interfaces__rosidl_generator_pyExport.cmake
+[1.381s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/export_acr_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[1.381s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/rosidl_cmake-extras.cmake
+[1.381s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.381s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.381s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[1.381s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[1.381s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.381s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.382s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[1.382s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/acr_interfacesConfig.cmake
+[1.382s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/cmake/acr_interfacesConfig-version.cmake
+[1.382s] -- Up-to-date: /home/leo/acr_ws/install/acr_interfaces/share/acr_interfaces/package.xml
+[1.383s] Invoked command in '/home/leo/acr_ws/build/acr_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/leo/acr_ws/build/acr_interfaces

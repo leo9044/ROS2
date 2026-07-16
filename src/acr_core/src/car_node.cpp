@@ -32,6 +32,7 @@ private:
       return;
     }
     startup_timer_->cancel();
+    RCLCPP_INFO(get_logger(), "[Service] Requesting vehicle authentication for VIN: %s", vin_number_.c_str());
     auto request = std::make_shared<acr_interfaces::srv::AuthVehicle::Request>();
     request->vin_number = vin_number_;
     auth_client_->async_send_request(request,
@@ -41,10 +42,10 @@ private:
   void auth_response(rclcpp::Client<acr_interfaces::srv::AuthVehicle>::SharedFuture future)
   {
     if (!future.get()->is_approved) {
-      RCLCPP_ERROR(get_logger(), "Vehicle authentication rejected");
+      RCLCPP_ERROR(get_logger(), "[Service] Vehicle authentication rejected");
       return;
     }
-    RCLCPP_INFO(get_logger(), "Vehicle authenticated; waiting for charging action server");
+    RCLCPP_INFO(get_logger(), "[Service] Vehicle authenticated; waiting for charging action server");
     action_wait_timer_ = create_wall_timer(200ms, std::bind(&CarNode::send_goal_when_ready, this));
   }
 
@@ -56,6 +57,7 @@ private:
     action_wait_timer_->cancel();
     ChargeRobot::Goal goal;
     goal.target_angle = target_angle_;
+    RCLCPP_INFO(get_logger(), "[Action] Sending charging goal: joint1 target %.2f rad", target_angle_);
     rclcpp_action::Client<ChargeRobot>::SendGoalOptions options;
     options.goal_response_callback = std::bind(&CarNode::goal_response, this, std::placeholders::_1);
     options.feedback_callback = std::bind(&CarNode::feedback, this, std::placeholders::_1, std::placeholders::_2);
@@ -66,9 +68,9 @@ private:
   void goal_response(const GoalHandle::SharedPtr & goal_handle)
   {
     if (!goal_handle) {
-      RCLCPP_ERROR(get_logger(), "Charging goal rejected by ACR server");
+      RCLCPP_ERROR(get_logger(), "[Action] Charging goal rejected by ACR server");
     } else {
-      RCLCPP_INFO(get_logger(), "Charging goal accepted");
+      RCLCPP_INFO(get_logger(), "[Action] Charging goal accepted");
     }
   }
 

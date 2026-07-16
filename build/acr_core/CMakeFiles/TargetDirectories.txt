@@ -2,6 +2,7 @@
 /home/leo/acr_ws/build/acr_core/CMakeFiles/acr_core_uninstall.dir
 /home/leo/acr_ws/build/acr_core/CMakeFiles/acr_node.dir
 /home/leo/acr_ws/build/acr_core/CMakeFiles/car_node.dir
+/home/leo/acr_ws/build/acr_core/CMakeFiles/acr_visualizer.dir
 /home/leo/acr_ws/build/acr_core/CMakeFiles/test.dir
 /home/leo/acr_ws/build/acr_core/CMakeFiles/edit_cache.dir
 /home/leo/acr_ws/build/acr_core/CMakeFiles/rebuild_cache.dir

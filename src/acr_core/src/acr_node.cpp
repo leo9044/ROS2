@@ -125,6 +125,8 @@ private:
     const double start_angle = current_angle();
     const double start_joint2_angle = current_joint2_angle();
     const double target = goal_handle->get_goal()->target_angle;
+    const double pre_approach_joint1 = start_angle + 0.65 * (target - start_angle);
+    const double pre_approach_joint2 = start_joint2_angle + 0.35 * (joint2_target_angle_ - start_joint2_angle);
     constexpr int kSteps = 200;
     auto result = std::make_shared<ChargeRobot::Result>();
     publish_joint2_command(start_joint2_angle);
@@ -145,10 +147,20 @@ private:
         return;
       }
       const double ratio = static_cast<double>(step) / kSteps;
-      publish_command(start_angle + (target - start_angle) * ratio);
-      publish_joint2_command(start_joint2_angle + (joint2_target_angle_ - start_joint2_angle) * ratio);
+      if (ratio < 0.65) {
+        const double phase = smoothstep(ratio / 0.65);
+        publish_command(interpolate(start_angle, pre_approach_joint1, phase));
+        publish_joint2_command(interpolate(start_joint2_angle, pre_approach_joint2, phase));
+      } else {
+        const double phase = smoothstep((ratio - 0.65) / 0.35);
+        publish_command(interpolate(pre_approach_joint1, target, phase));
+        publish_joint2_command(interpolate(pre_approach_joint2, joint2_target_angle_, phase));
+      }
       auto feedback = std::make_shared<ChargeRobot::Feedback>();
-      feedback->current_percent = 100.0 * ratio;
+      const double travel = std::abs(target - start_angle);
+      const double measured_travel = std::abs(current_angle() - start_angle);
+      feedback->current_percent = travel < 1e-6 ? 100.0 :
+        std::clamp(100.0 * measured_travel / travel, 0.0, 100.0);
       goal_handle->publish_feedback(feedback);
       std::this_thread::sleep_for(std::chrono::milliseconds(control_period_ms_));
     }
@@ -163,6 +175,17 @@ private:
   {
     std::lock_guard<std::mutex> lock(state_mutex_);
     return has_joint_state_ ? joint1_angle_ : 0.0;
+  }
+
+  static double smoothstep(double value)
+  {
+    const double t = std::clamp(value, 0.0, 1.0);
+    return t * t * (3.0 - 2.0 * t);
+  }
+
+  static double interpolate(double from, double to, double ratio)
+  {
+    return from + (to - from) * ratio;
   }
 
   double current_joint2_angle()

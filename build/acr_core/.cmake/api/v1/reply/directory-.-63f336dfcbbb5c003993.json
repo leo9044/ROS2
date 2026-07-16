@@ -36,19 +36,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 19,
+				"line" : 23,
 				"parent" : 0
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 23,
+				"line" : 27,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 0,
-				"line" : 32,
+				"line" : 36,
 				"parent" : 0
 			},
 			{
@@ -261,7 +261,7 @@
 				"car_node"
 			],
 			"targetId" : "car_node::@6890427a1f51a3e7e1df",
-			"targetIndex" : 2,
+			"targetIndex" : 3,
 			"type" : "target"
 		},
 		{
@@ -270,6 +270,29 @@
 			"cxxModuleBmiTarget" : 
 			{
 				"id" : "car_node::@6890427a1f51a3e7e1df",
+				"index" : 3
+			},
+			"destination" : "lib/acr_core",
+			"type" : "cxxModuleBmi"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib/acr_core",
+			"paths" : 
+			[
+				"acr_visualizer"
+			],
+			"targetId" : "acr_visualizer::@6890427a1f51a3e7e1df",
+			"targetIndex" : 2,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "acr_visualizer::@6890427a1f51a3e7e1df",
 				"index" : 2
 			},
 			"destination" : "lib/acr_core",

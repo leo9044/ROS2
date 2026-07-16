@@ -275,7 +275,7 @@ SITE:STRING=DESKTOP-0DB3GUP
 TinyXML2_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/tinyxml2
 
 //Path to a library.
-_lib:FILEPATH=/opt/ros/jazzy/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so
+_lib:FILEPATH=/opt/ros/jazzy/lib/libvisualization_msgs__rosidl_typesupport_fastrtps_cpp.so
 
 //Value Computed by CMake
 acr_core_BINARY_DIR:STATIC=/home/leo/acr_ws/build/acr_core
@@ -483,6 +483,9 @@ type_description_interfaces_DIR:PATH=/opt/ros/jazzy/share/type_description_inter
 
 //The directory containing a CMake configuration file for unique_identifier_msgs.
 unique_identifier_msgs_DIR:PATH=/opt/ros/jazzy/share/unique_identifier_msgs/cmake
+
+//The directory containing a CMake configuration file for visualization_msgs.
+visualization_msgs_DIR:PATH=/opt/ros/jazzy/share/visualization_msgs/cmake
 
 
 ########################

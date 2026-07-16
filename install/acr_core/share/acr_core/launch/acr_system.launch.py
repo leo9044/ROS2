@@ -38,22 +38,34 @@ def generate_launch_description():
 
     bridge = Node(
         package='ros_gz_bridge', executable='parameter_bridge', output='screen',
-        parameters=[{'config_file': os.path.join(pkg_share, 'config', 'bridge.yaml')}])
+        parameters=[
+            {'config_file': os.path.join(pkg_share, 'config', 'bridge.yaml')},
+            {'override_frame_id': 'tool0'},
+        ])
 
     robot_state_publisher = Node(
         package='robot_state_publisher', executable='robot_state_publisher', output='screen',
         parameters=[{'robot_description': robot_description, 'use_sim_time': True}])
 
+    safety_distance = LaunchConfiguration('safety_distance')
+    spawn_obstacle = LaunchConfiguration('spawn_obstacle')
+    obstacle_delay_sec = LaunchConfiguration('obstacle_delay_sec')
     acr_node = Node(
         package='acr_core', executable='acr_node', output='screen',
-        parameters=[{'use_sim_time': True, 'safety_distance': 0.3}])
+        parameters=[{'use_sim_time': True, 'safety_distance': safety_distance}])
 
     car_node = Node(
         package='acr_core', executable='car_node', output='screen',
         parameters=[{'target_angle': 1.0, 'vin_number': 'ACR-2026-0001'}])
 
-    spawn_obstacle = LaunchConfiguration('spawn_obstacle')
-    obstacle_delay_sec = LaunchConfiguration('obstacle_delay_sec')
+    scene_visualizer = Node(
+        package='acr_core', executable='acr_visualizer', output='screen',
+        parameters=[{'show_obstacle': spawn_obstacle}])
+
+    rviz = Node(
+        package='rviz2', executable='rviz2', output='screen',
+        arguments=['-d', os.path.join(pkg_share, 'config', 'acr.rviz')])
+
     obstacle = Node(
         package='ros_gz_sim', executable='create', output='screen',
         condition=IfCondition(spawn_obstacle),
@@ -66,8 +78,10 @@ def generate_launch_description():
                               description='Spawn the MRM test Box during charging.'),
         DeclareLaunchArgument('obstacle_delay_sec', default_value='5.0',
                               description='Delay in seconds before spawning the MRM test Box.'),
+        DeclareLaunchArgument('safety_distance', default_value='0.18',
+                              description='MRM detection distance in meters for this simulation.'),
         gazebo,
-        TimerAction(period=2.0, actions=[spawn_robot, spawn_vehicle, bridge, robot_state_publisher, acr_node]),
+        TimerAction(period=2.0, actions=[spawn_robot, spawn_vehicle, bridge, robot_state_publisher, acr_node, scene_visualizer, rviz]),
         TimerAction(period=4.0, actions=[car_node]),
         TimerAction(period=obstacle_delay_sec, actions=[obstacle]),
     ])

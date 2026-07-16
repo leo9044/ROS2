@@ -1,6 +1,8 @@
 /home/leo/acr_ws/install/acr_core/lib/acr_core/acr_node
 /home/leo/acr_ws/install/acr_core/lib/acr_core/car_node
+/home/leo/acr_ws/install/acr_core/lib/acr_core/acr_visualizer
 /home/leo/acr_ws/install/acr_core/share/acr_core/config/.gitkeep
+/home/leo/acr_ws/install/acr_core/share/acr_core/config/acr.rviz
 /home/leo/acr_ws/install/acr_core/share/acr_core/config/bridge.yaml
 /home/leo/acr_ws/install/acr_core/share/acr_core/launch/acr_system.launch.py
 /home/leo/acr_ws/install/acr_core/share/acr_core/launch/.gitkeep

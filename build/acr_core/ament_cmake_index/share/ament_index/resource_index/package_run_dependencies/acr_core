@@ -1,1 +1,1 @@
-acr_interfaces;rclcpp;rclcpp_action;sensor_msgs;std_msgs;ros_gz_sim;ros_gz_bridge;robot_state_publisher
+acr_interfaces;rclcpp;rclcpp_action;sensor_msgs;std_msgs;visualization_msgs;ros_gz_sim;ros_gz_bridge;robot_state_publisher

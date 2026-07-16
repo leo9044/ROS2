@@ -223,6 +223,19 @@ car_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/car_node.dir/build.make CMakeFiles/car_node.dir/build
 .PHONY : car_node/fast
 
+#=============================================================================
+# Target rules for targets named acr_visualizer
+
+# Build rule for target.
+acr_visualizer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 acr_visualizer
+.PHONY : acr_visualizer
+
+# fast build rule for target.
+acr_visualizer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/acr_visualizer.dir/build.make CMakeFiles/acr_visualizer.dir/build
+.PHONY : acr_visualizer/fast
+
 src/acr_node.o: src/acr_node.cpp.o
 .PHONY : src/acr_node.o
 
@@ -246,6 +259,30 @@ src/acr_node.s: src/acr_node.cpp.s
 src/acr_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/acr_node.dir/build.make CMakeFiles/acr_node.dir/src/acr_node.cpp.s
 .PHONY : src/acr_node.cpp.s
+
+src/acr_visualizer.o: src/acr_visualizer.cpp.o
+.PHONY : src/acr_visualizer.o
+
+# target to build an object file
+src/acr_visualizer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/acr_visualizer.dir/build.make CMakeFiles/acr_visualizer.dir/src/acr_visualizer.cpp.o
+.PHONY : src/acr_visualizer.cpp.o
+
+src/acr_visualizer.i: src/acr_visualizer.cpp.i
+.PHONY : src/acr_visualizer.i
+
+# target to preprocess a source file
+src/acr_visualizer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/acr_visualizer.dir/build.make CMakeFiles/acr_visualizer.dir/src/acr_visualizer.cpp.i
+.PHONY : src/acr_visualizer.cpp.i
+
+src/acr_visualizer.s: src/acr_visualizer.cpp.s
+.PHONY : src/acr_visualizer.s
+
+# target to generate assembly for a file
+src/acr_visualizer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/acr_visualizer.dir/build.make CMakeFiles/acr_visualizer.dir/src/acr_visualizer.cpp.s
+.PHONY : src/acr_visualizer.cpp.s
 
 src/car_node.o: src/car_node.cpp.o
 .PHONY : src/car_node.o
@@ -287,10 +324,14 @@ help:
 	@echo "... acr_core_uninstall"
 	@echo "... uninstall"
 	@echo "... acr_node"
+	@echo "... acr_visualizer"
 	@echo "... car_node"
 	@echo "... src/acr_node.o"
 	@echo "... src/acr_node.i"
 	@echo "... src/acr_node.s"
+	@echo "... src/acr_visualizer.o"
+	@echo "... src/acr_visualizer.i"
+	@echo "... src/acr_visualizer.s"
 	@echo "... src/car_node.o"
 	@echo "... src/car_node.i"
 	@echo "... src/car_node.s"

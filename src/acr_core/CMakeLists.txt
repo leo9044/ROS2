@@ -7,6 +7,7 @@ find_package(rclcpp REQUIRED)
 find_package(rclcpp_action REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(visualization_msgs REQUIRED)
 
 add_executable(acr_node src/acr_node.cpp)
 ament_target_dependencies(acr_node
@@ -16,7 +17,10 @@ add_executable(car_node src/car_node.cpp)
 ament_target_dependencies(car_node
   acr_interfaces rclcpp rclcpp_action)
 
-install(TARGETS acr_node car_node
+add_executable(acr_visualizer src/acr_visualizer.cpp)
+ament_target_dependencies(acr_visualizer rclcpp visualization_msgs)
+
+install(TARGETS acr_node car_node acr_visualizer
   DESTINATION lib/${PROJECT_NAME}
 )
 
