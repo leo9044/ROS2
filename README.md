@@ -41,4 +41,4 @@ ros2 launch acr_core acr_system.launch.py safety_distance:=0.15
 ros2 param set /acr_node safety_distance 0.15
 ```
 
-기본 시연값은 `0.18 m`이며, C++ 노드의 원래 선언 기본값은 과제 명세대로 `0.3 m`이다.
+기본 안전거리 파라미터는 `0.15 m`이다. 실행 중에도 `ros2 param set`으로 즉시 바꿀 수 있다.

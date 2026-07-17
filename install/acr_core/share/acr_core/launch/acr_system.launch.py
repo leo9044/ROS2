@@ -71,14 +71,14 @@ def generate_launch_description():
         condition=IfCondition(spawn_obstacle),
         arguments=['-world', 'acr_world', '-name', 'mrm_obstacle', '-file',
                    os.path.join(pkg_share, 'models', 'box_obstacle.sdf'),
-                   '-x', '1.18', '-y', '0.0', '-z', '0.725'])
+                   '-x', '1.18', '-y', '0.0', '-z', '0.0'])
 
     return LaunchDescription([
         DeclareLaunchArgument('spawn_obstacle', default_value='false',
                               description='Spawn the MRM test Box during charging.'),
         DeclareLaunchArgument('obstacle_delay_sec', default_value='5.0',
                               description='Delay in seconds before spawning the MRM test Box.'),
-        DeclareLaunchArgument('safety_distance', default_value='0.18',
+        DeclareLaunchArgument('safety_distance', default_value='0.15',
                               description='MRM detection distance in meters for this simulation.'),
         gazebo,
         TimerAction(period=2.0, actions=[spawn_robot, spawn_vehicle, bridge, robot_state_publisher, acr_node, scene_visualizer, rviz]),

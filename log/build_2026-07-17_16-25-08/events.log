@@ -1,0 +1,172 @@
+[0.000000] (-) TimerEvent: {}
+[0.000234] (-) JobUnselected: {'identifier': 'acr_interfaces'}
+[0.000498] (acr_core) JobQueued: {'identifier': 'acr_core', 'dependencies': OrderedDict({'acr_interfaces': '/home/leo/acr_ws/install/acr_interfaces'})}
+[0.000842] (acr_core) JobStarted: {'identifier': 'acr_core'}
+[0.035264] (acr_core) JobProgress: {'identifier': 'acr_core', 'progress': 'cmake'}
+[0.036233] (acr_core) JobProgress: {'identifier': 'acr_core', 'progress': 'build'}
+[0.036724] (acr_core) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/leo/acr_ws/build/acr_core', '--', '-j12', '-l12'], 'cwd': '/home/leo/acr_ws/build/acr_core', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/mnt/c/Users/임승하/AppData/Local/Programs/Microsoft VS Code', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'CODEX_CI': '1', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'leo', 'CODEX_INTERNAL_ORIGINATOR_OVERRIDE': 'codex_vscode', 'VSCODE_NLS_CONFIG': '{"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/leo/.vscode-server/bin/125df4672b8a6a34975303c6b0baa124e560a4f7/out/nls.messages.json","locale":"en","availableLanguages":{}}', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'VSCODE_WSL_EXT_LOCATION': '/mnt/c/Users/임승하/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'DEBUG': 'release', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/leo/acr_ws/install/acr_interfaces/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/leo', 'VSCODE_RECONNECTION_GRACE_TIME': '10800000', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-78ebe393-5a9f-4200-bb69-090ae8cbea47.sock', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'LC_CTYPE': 'C.UTF-8', 'NO_COLOR': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': '', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'CODEX_PERMISSION_PROFILE': ':workspace', 'APPLICATION_INSIGHTS_NO_STATSBEAT': 'true', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'leo', 'NAME': 'Code', 'WSL_INTEROP': '/run/WSL/491_interop', 'VSCODE_HANDLES_SIGPIPE': 'true', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'RUST_LOG': 'warn', 'TERM': 'dumb', 'PATH': '/home/leo/.codex/tmp/arg0/codex-arg09G7xgv:/home/leo/.vscode-server/bin/125df4672b8a6a34975303c6b0baa124e560a4f7/bin/remote-cli:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemForLinux_2.7.10.0_x64__8wekyb3d8bbwe:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/임승하/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/임승하/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/leo/.vscode-server/extensions/openai.chatgpt-26.707.91948-linux-x64/bin/linux-x86_64', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'LANG': 'C.UTF-8', 'GH_PAGER': 'cat', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/leo/acr_ws/install/acr_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'ELECTRON_RUN_AS_NODE': '1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CODEX_THREAD_ID': '019f63e2-91ee-7431-917c-cc9edb3b3355', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'GIT_PAGER': 'cat', 'PWD': '/home/leo/acr_ws/build/acr_core', 'LC_ALL': 'C.UTF-8', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/leo/acr_ws/install/acr_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'ELECTRON_RUN_AS_NODE/w:'}), 'shell': False}
+[0.099850] (-) TimerEvent: {}
+[0.200054] (-) TimerEvent: {}
+[0.211485] (acr_core) StdoutLine: {'line': b'[ 16%] Building CXX object CMakeFiles/acr_node.dir/src/acr_node.cpp.o\n'}
+[0.211968] (acr_core) StdoutLine: {'line': b'[ 50%] Built target car_node\n'}
+[0.212169] (acr_core) StdoutLine: {'line': b'[ 66%] Building CXX object CMakeFiles/acr_visualizer.dir/src/acr_visualizer.cpp.o\n'}
+[0.300220] (-) TimerEvent: {}
+[0.400414] (-) TimerEvent: {}
+[0.500600] (-) TimerEvent: {}
+[0.600795] (-) TimerEvent: {}
+[0.701010] (-) TimerEvent: {}
+[0.801223] (-) TimerEvent: {}
+[0.901439] (-) TimerEvent: {}
+[1.001693] (-) TimerEvent: {}
+[1.101985] (-) TimerEvent: {}
+[1.202228] (-) TimerEvent: {}
+[1.302475] (-) TimerEvent: {}
+[1.402690] (-) TimerEvent: {}
+[1.502932] (-) TimerEvent: {}
+[1.603142] (-) TimerEvent: {}
+[1.703449] (-) TimerEvent: {}
+[1.803608] (-) TimerEvent: {}
+[1.903797] (-) TimerEvent: {}
+[2.003959] (-) TimerEvent: {}
+[2.104164] (-) TimerEvent: {}
+[2.204387] (-) TimerEvent: {}
+[2.304605] (-) TimerEvent: {}
+[2.404786] (-) TimerEvent: {}
+[2.505026] (-) TimerEvent: {}
+[2.605252] (-) TimerEvent: {}
+[2.705494] (-) TimerEvent: {}
+[2.805743] (-) TimerEvent: {}
+[2.905968] (-) TimerEvent: {}
+[3.006178] (-) TimerEvent: {}
+[3.106338] (-) TimerEvent: {}
+[3.206500] (-) TimerEvent: {}
+[3.306691] (-) TimerEvent: {}
+[3.406922] (-) TimerEvent: {}
+[3.507207] (-) TimerEvent: {}
+[3.607523] (-) TimerEvent: {}
+[3.707805] (-) TimerEvent: {}
+[3.808131] (-) TimerEvent: {}
+[3.908462] (-) TimerEvent: {}
+[4.008829] (-) TimerEvent: {}
+[4.109153] (-) TimerEvent: {}
+[4.209684] (-) TimerEvent: {}
+[4.310069] (-) TimerEvent: {}
+[4.410338] (-) TimerEvent: {}
+[4.510552] (-) TimerEvent: {}
+[4.569322] (acr_core) StdoutLine: {'line': b'[ 83%] Linking CXX executable acr_visualizer\n'}
+[4.610648] (-) TimerEvent: {}
+[4.710888] (-) TimerEvent: {}
+[4.811110] (-) TimerEvent: {}
+[4.902371] (acr_core) StdoutLine: {'line': b'[ 83%] Built target acr_visualizer\n'}
+[4.911219] (-) TimerEvent: {}
+[5.011423] (-) TimerEvent: {}
+[5.111563] (-) TimerEvent: {}
+[5.211743] (-) TimerEvent: {}
+[5.311928] (-) TimerEvent: {}
+[5.412131] (-) TimerEvent: {}
+[5.512320] (-) TimerEvent: {}
+[5.612551] (-) TimerEvent: {}
+[5.712733] (-) TimerEvent: {}
+[5.812946] (-) TimerEvent: {}
+[5.913209] (-) TimerEvent: {}
+[6.013466] (-) TimerEvent: {}
+[6.113771] (-) TimerEvent: {}
+[6.214041] (-) TimerEvent: {}
+[6.314292] (-) TimerEvent: {}
+[6.414568] (-) TimerEvent: {}
+[6.515086] (-) TimerEvent: {}
+[6.615330] (-) TimerEvent: {}
+[6.715534] (-) TimerEvent: {}
+[6.815767] (-) TimerEvent: {}
+[6.916009] (-) TimerEvent: {}
+[7.016322] (-) TimerEvent: {}
+[7.116557] (-) TimerEvent: {}
+[7.216910] (-) TimerEvent: {}
+[7.317200] (-) TimerEvent: {}
+[7.417459] (-) TimerEvent: {}
+[7.517721] (-) TimerEvent: {}
+[7.618019] (-) TimerEvent: {}
+[7.718298] (-) TimerEvent: {}
+[7.818655] (-) TimerEvent: {}
+[7.919057] (-) TimerEvent: {}
+[8.019323] (-) TimerEvent: {}
+[8.119548] (-) TimerEvent: {}
+[8.219815] (-) TimerEvent: {}
+[8.320197] (-) TimerEvent: {}
+[8.420431] (-) TimerEvent: {}
+[8.520677] (-) TimerEvent: {}
+[8.621003] (-) TimerEvent: {}
+[8.721330] (-) TimerEvent: {}
+[8.821755] (-) TimerEvent: {}
+[8.922919] (-) TimerEvent: {}
+[9.023987] (-) TimerEvent: {}
+[9.124343] (-) TimerEvent: {}
+[9.224744] (-) TimerEvent: {}
+[9.325799] (-) TimerEvent: {}
+[9.426815] (-) TimerEvent: {}
+[9.527662] (-) TimerEvent: {}
+[9.628645] (-) TimerEvent: {}
+[9.729629] (-) TimerEvent: {}
+[9.830653] (-) TimerEvent: {}
+[9.931086] (-) TimerEvent: {}
+[10.031347] (-) TimerEvent: {}
+[10.131556] (-) TimerEvent: {}
+[10.231783] (-) TimerEvent: {}
+[10.332078] (-) TimerEvent: {}
+[10.432305] (-) TimerEvent: {}
+[10.532728] (-) TimerEvent: {}
+[10.633067] (-) TimerEvent: {}
+[10.733289] (-) TimerEvent: {}
+[10.833531] (-) TimerEvent: {}
+[10.933736] (-) TimerEvent: {}
+[11.034056] (-) TimerEvent: {}
+[11.134425] (-) TimerEvent: {}
+[11.234684] (-) TimerEvent: {}
+[11.244069] (acr_core) StdoutLine: {'line': b'[100%] Linking CXX executable acr_node\n'}
+[11.334913] (-) TimerEvent: {}
+[11.435125] (-) TimerEvent: {}
+[11.535329] (-) TimerEvent: {}
+[11.635534] (-) TimerEvent: {}
+[11.695287] (acr_core) StdoutLine: {'line': b'[100%] Built target acr_node\n'}
+[11.704768] (acr_core) CommandEnded: {'returncode': 0}
+[11.706751] (acr_core) JobProgress: {'identifier': 'acr_core', 'progress': 'install'}
+[11.714902] (acr_core) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/leo/acr_ws/build/acr_core'], 'cwd': '/home/leo/acr_ws/build/acr_core', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/mnt/c/Users/임승하/AppData/Local/Programs/Microsoft VS Code', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'CODEX_CI': '1', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'leo', 'CODEX_INTERNAL_ORIGINATOR_OVERRIDE': 'codex_vscode', 'VSCODE_NLS_CONFIG': '{"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/leo/.vscode-server/bin/125df4672b8a6a34975303c6b0baa124e560a4f7/out/nls.messages.json","locale":"en","availableLanguages":{}}', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'VSCODE_WSL_EXT_LOCATION': '/mnt/c/Users/임승하/.vscode/extensions/ms-vscode-remote.remote-wsl-0.104.3', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'DEBUG': 'release', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/leo/acr_ws/install/acr_interfaces/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/leo', 'VSCODE_RECONNECTION_GRACE_TIME': '10800000', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-78ebe393-5a9f-4200-bb69-090ae8cbea47.sock', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'LC_CTYPE': 'C.UTF-8', 'NO_COLOR': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': '', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'CODEX_PERMISSION_PROFILE': ':workspace', 'APPLICATION_INSIGHTS_NO_STATSBEAT': 'true', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'leo', 'NAME': 'Code', 'WSL_INTEROP': '/run/WSL/491_interop', 'VSCODE_HANDLES_SIGPIPE': 'true', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'RUST_LOG': 'warn', 'TERM': 'dumb', 'PATH': '/home/leo/.codex/tmp/arg0/codex-arg09G7xgv:/home/leo/.vscode-server/bin/125df4672b8a6a34975303c6b0baa124e560a4f7/bin/remote-cli:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/MicrosoftCorporationII.WindowsSubsystemForLinux_2.7.10.0_x64__8wekyb3d8bbwe:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/임승하/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/임승하/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/leo/.vscode-server/extensions/openai.chatgpt-26.707.91948-linux-x64/bin/linux-x86_64', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'LANG': 'C.UTF-8', 'GH_PAGER': 'cat', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/leo/acr_ws/install/acr_interfaces:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'ELECTRON_RUN_AS_NODE': '1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CODEX_THREAD_ID': '019f63e2-91ee-7431-917c-cc9edb3b3355', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'GIT_PAGER': 'cat', 'PWD': '/home/leo/acr_ws/build/acr_core', 'LC_ALL': 'C.UTF-8', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/home/leo/acr_ws/install/acr_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'ELECTRON_RUN_AS_NODE/w:'}), 'shell': False}
+[11.722257] (acr_core) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[11.722558] (acr_core) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_core/lib/acr_core/acr_node\n'}
+[11.731403] (acr_core) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/leo/acr_ws/install/acr_core/lib/acr_core/acr_node" to ""\n'}
+[11.731827] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/lib/acr_core/car_node\n'}
+[11.731940] (acr_core) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_core/lib/acr_core/acr_visualizer\n'}
+[11.732655] (acr_core) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/leo/acr_ws/install/acr_core/lib/acr_core/acr_visualizer" to ""\n'}
+[11.732949] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/config\n'}
+[11.733044] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/config/.gitkeep\n'}
+[11.733188] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/config/acr.rviz\n'}
+[11.733436] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/config/bridge.yaml\n'}
+[11.733657] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/launch\n'}
+[11.733733] (acr_core) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_core/share/acr_core/launch/acr_system.launch.py\n'}
+[11.733845] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/launch/.gitkeep\n'}
+[11.733919] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/models\n'}
+[11.734043] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/models/ev_vehicle.sdf\n'}
+[11.734350] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/models/box_obstacle.sdf\n'}
+[11.734463] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/urdf\n'}
+[11.734542] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/urdf/acr_rrbot.urdf\n'}
+[11.734608] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/worlds\n'}
+[11.734674] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/worlds/acr_empty.sdf\n'}
+[11.734830] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/ament_index/resource_index/package_run_dependencies/acr_core\n'}
+[11.734972] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/ament_index/resource_index/parent_prefix_path/acr_core\n'}
+[11.735151] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/environment/ament_prefix_path.sh\n'}
+[11.735631] (-) TimerEvent: {}
+[11.735662] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/environment/ament_prefix_path.dsv\n'}
+[11.735786] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/environment/path.sh\n'}
+[11.735860] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/environment/path.dsv\n'}
+[11.735931] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/local_setup.bash\n'}
+[11.736252] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/local_setup.sh\n'}
+[11.736358] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/local_setup.zsh\n'}
+[11.736466] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/local_setup.dsv\n'}
+[11.736610] (acr_core) StdoutLine: {'line': b'-- Installing: /home/leo/acr_ws/install/acr_core/share/acr_core/package.dsv\n'}
+[11.736708] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/ament_index/resource_index/packages/acr_core\n'}
+[11.736831] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/cmake/acr_coreConfig.cmake\n'}
+[11.736938] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/cmake/acr_coreConfig-version.cmake\n'}
+[11.737047] (acr_core) StdoutLine: {'line': b'-- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/package.xml\n'}
+[11.737544] (acr_core) CommandEnded: {'returncode': 0}
+[11.758685] (acr_core) JobEnded: {'identifier': 'acr_core', 'rc': 0}
+[11.760094] (-) EventReactorShutdown: {}

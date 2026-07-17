@@ -26,7 +26,7 @@ public:
 
   AcrNode() : Node("acr_node")
   {
-    safety_distance_ = this->declare_parameter<double>("safety_distance", 0.3);
+    safety_distance_ = this->declare_parameter<double>("safety_distance", 0.15);
     approved_vin_ = this->declare_parameter<std::string>("approved_vin", "ACR-2026-0001");
     control_period_ms_ = this->declare_parameter<int>("control_period_ms", 50);
     joint2_target_angle_ = this->declare_parameter<double>("joint2_target_angle", 0.70);
@@ -241,7 +241,7 @@ private:
     return result;
   }
 
-  double safety_distance_{0.3};
+  double safety_distance_{0.15};
   std::string approved_vin_;
   int control_period_ms_{50};
   double joint1_angle_{0.0};

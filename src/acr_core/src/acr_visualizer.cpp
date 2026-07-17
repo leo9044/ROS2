@@ -61,7 +61,7 @@ private:
       const double x = i < 2 ? 3.30 : 1.88;
       const double y = (i % 2 == 0) ? 0.69 : -0.69;
       auto wheel = marker(3 + i, "ev_vehicle", visualization_msgs::msg::Marker::CYLINDER,
-        x, y, 0.32, 0.56, 0.16, 0.56, 0.03F, 0.03F, 0.03F);
+        x, y, 0.32, 0.56, 0.56, 0.16, 0.03F, 0.03F, 0.03F);
       wheel.pose.orientation.x = 0.7071068;
       wheel.pose.orientation.w = 0.7071068;
       scene.markers.push_back(wheel);
