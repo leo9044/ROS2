@@ -33,7 +33,7 @@ Visualization Manager:
     - Alpha: 1
       Class: rviz_default_plugins/MarkerArray
       Enabled: true
-      Name: EV Vehicle and MRM Obstacle
+      Name: EV Vehicle and CPS Obstacle
       Topic:
         Depth: 5
         Durability Policy: Volatile

@@ -81,13 +81,13 @@ private:
       scene.markers.push_back(wheel);
     }
     if (show_obstacle_) {
-      scene.markers.push_back(marker(10, "mrm_person", visualization_msgs::msg::Marker::CYLINDER,
+      scene.markers.push_back(marker(10, "cps_person", visualization_msgs::msg::Marker::CYLINDER,
         1.23, 0.085, 0.34, 0.14, 0.14, 0.68, 0.08F, 0.08F, 0.12F));
-      scene.markers.push_back(marker(11, "mrm_person", visualization_msgs::msg::Marker::CYLINDER,
+      scene.markers.push_back(marker(11, "cps_person", visualization_msgs::msg::Marker::CYLINDER,
         1.23, -0.085, 0.34, 0.14, 0.14, 0.68, 0.08F, 0.08F, 0.12F));
-      scene.markers.push_back(marker(12, "mrm_person", visualization_msgs::msg::Marker::CUBE,
+      scene.markers.push_back(marker(12, "cps_person", visualization_msgs::msg::Marker::CUBE,
         1.23, 0.0, 0.85, 0.24, 0.28, 0.45, 0.85F, 0.05F, 0.05F));
-      scene.markers.push_back(marker(13, "mrm_person", visualization_msgs::msg::Marker::SPHERE,
+      scene.markers.push_back(marker(13, "cps_person", visualization_msgs::msg::Marker::SPHERE,
         1.23, 0.0, 1.22, 0.28, 0.28, 0.28, 0.95F, 0.72F, 0.55F));
     }
     add_system_markers(scene);
@@ -112,7 +112,7 @@ private:
     auto hud = marker(21, "acr_system", visualization_msgs::msg::Marker::TEXT_VIEW_FACING,
       0.0, 0.0, 2.15, 0.0, 0.0, 0.16, 0.20F, 0.95F, 0.30F);
     hud.text = text.str();
-    if (status_ == "MRM ACTIVE" || status_ == "AUTH REJECTED") {
+    if (status_ == "CPS ACTIVE" || status_ == "AUTH REJECTED") {
       hud.color.r = 1.0F; hud.color.g = 0.05F; hud.color.b = 0.05F;
     } else if (status_ == "MOVING TO CHARGE PORT") {
       hud.color.r = 1.0F; hud.color.g = 0.80F; hud.color.b = 0.05F;

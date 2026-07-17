@@ -1,6 +1,6 @@
 # ACR 사전 충돌 예방 시스템
 
-Gazebo Harmonic, ROS 2 Jazzy, `ros_gz_bridge`, RViz2를 이용한 2축 전기차 충전 로봇 시뮬레이션이다. Service 차량 인증, Action 기반 충전 궤적, Topic LiDAR 감시, Parameter 안전거리, MRM 긴급 정지를 포함한다.
+Gazebo Harmonic, ROS 2 Jazzy, `ros_gz_bridge`, RViz2를 이용한 2축 전기차 충전 로봇 시뮬레이션이다. Service 차량 인증, Action 기반 충전 궤적, Topic LiDAR 감시, Parameter 안전거리, 충돌 예방 정지(CPS)를 포함한다.
 
 ## 빌드
 
@@ -19,7 +19,7 @@ ros2 launch acr_core acr_system.launch.py
 
 Gazebo, 자체 차량, 2축 ACR, ROS-Gazebo bridge, ACR_Node, CAR_Node, RViz2가 함께 실행된다. RViz에는 RobotModel과 파란 `/scan`이 표시되고, CAR_Node 터미널에는 `Moving to charging port` 진행률과 성공 결과가 출력된다.
 
-## MRM 시나리오
+## 충돌 예방 정지(CPS) 시나리오
 
 ```bash
 ros2 launch acr_core acr_system.launch.py spawn_obstacle:=true obstacle_delay_sec:=5.0

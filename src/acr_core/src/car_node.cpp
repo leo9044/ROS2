@@ -11,6 +11,14 @@
 
 using namespace std::chrono_literals;
 
+namespace terminal_color
+{
+constexpr const char * kReset = "\033[0m";
+constexpr const char * kService = "\033[1;36m";   // cyan
+constexpr const char * kAction = "\033[1;35m";    // magenta
+constexpr const char * kFeedback = "\033[1;33m";  // yellow
+}  // namespace terminal_color
+
 class CarNode : public rclcpp::Node
 {
 public:
@@ -35,7 +43,8 @@ private:
       return;
     }
     startup_timer_->cancel();
-    RCLCPP_INFO(get_logger(), "[Service] Server found; request will be sent in %.1f s", auth_request_delay_sec_);
+    RCLCPP_INFO(get_logger(), "%s[SERVICE]%s Server found; request will be sent in %.1f s",
+      terminal_color::kService, terminal_color::kReset, auth_request_delay_sec_);
     auth_request_timer_ = create_wall_timer(
       demo_delay(auth_request_delay_sec_),
       std::bind(&CarNode::send_auth_request, this));
@@ -44,7 +53,8 @@ private:
   void send_auth_request()
   {
     auth_request_timer_->cancel();
-    RCLCPP_INFO(get_logger(), "[Service] Requesting vehicle authentication for VIN: %s", vin_number_.c_str());
+    RCLCPP_INFO(get_logger(), "%s[SERVICE]%s Requesting vehicle authentication for VIN: %s",
+      terminal_color::kService, terminal_color::kReset, vin_number_.c_str());
     auto request = std::make_shared<acr_interfaces::srv::AuthVehicle::Request>();
     request->vin_number = vin_number_;
     auth_client_->async_send_request(request,
@@ -54,10 +64,12 @@ private:
   void auth_response(rclcpp::Client<acr_interfaces::srv::AuthVehicle>::SharedFuture future)
   {
     if (!future.get()->is_approved) {
-      RCLCPP_ERROR(get_logger(), "[Service] Vehicle authentication rejected");
+      RCLCPP_ERROR(get_logger(), "%s[SERVICE]%s Vehicle authentication rejected",
+        terminal_color::kService, terminal_color::kReset);
       return;
     }
-    RCLCPP_INFO(get_logger(), "[Service] Vehicle authenticated; Action goal will be sent in %.1f s", action_goal_delay_sec_);
+    RCLCPP_INFO(get_logger(), "%s[SERVICE]%s Vehicle authenticated; Action goal will be sent in %.1f s",
+      terminal_color::kService, terminal_color::kReset, action_goal_delay_sec_);
     action_delay_timer_ = create_wall_timer(
       demo_delay(action_goal_delay_sec_),
       std::bind(&CarNode::begin_action_wait, this));
@@ -66,7 +78,8 @@ private:
   void begin_action_wait()
   {
     action_delay_timer_->cancel();
-    RCLCPP_INFO(get_logger(), "[Action] Waiting for charging action server");
+    RCLCPP_INFO(get_logger(), "%s[ACTION]%s Waiting for charging action server",
+      terminal_color::kAction, terminal_color::kReset);
     action_wait_timer_ = create_wall_timer(200ms, std::bind(&CarNode::send_goal_when_ready, this));
   }
 
@@ -83,7 +96,8 @@ private:
     action_wait_timer_->cancel();
     ChargeRobot::Goal goal;
     goal.target_angle = target_angle_;
-    RCLCPP_INFO(get_logger(), "[Action] Sending charging goal: joint1 target %.2f rad", target_angle_);
+    RCLCPP_INFO(get_logger(), "%s[ACTION]%s Sending charging goal: joint1 target %.2f rad",
+      terminal_color::kAction, terminal_color::kReset, target_angle_);
     rclcpp_action::Client<ChargeRobot>::SendGoalOptions options;
     options.goal_response_callback = std::bind(&CarNode::goal_response, this, std::placeholders::_1);
     options.feedback_callback = std::bind(&CarNode::feedback, this, std::placeholders::_1, std::placeholders::_2);
@@ -94,31 +108,38 @@ private:
   void goal_response(const GoalHandle::SharedPtr & goal_handle)
   {
     if (!goal_handle) {
-      RCLCPP_ERROR(get_logger(), "[Action] Charging goal rejected by ACR server");
+      RCLCPP_ERROR(get_logger(), "%s[ACTION]%s Charging goal rejected by ACR server",
+        terminal_color::kAction, terminal_color::kReset);
     } else {
-      RCLCPP_INFO(get_logger(), "[Action] Charging goal accepted");
+      RCLCPP_INFO(get_logger(), "%s[ACTION]%s Charging goal accepted",
+        terminal_color::kAction, terminal_color::kReset);
     }
   }
 
   void feedback(GoalHandle::SharedPtr, const std::shared_ptr<const ChargeRobot::Feedback> feedback)
   {
-    RCLCPP_INFO(get_logger(), "Moving to charging port: %.1f%%", feedback->current_percent);
+    RCLCPP_INFO(get_logger(), "%s[FEEDBACK]%s Moving to charging port: %.1f%%",
+      terminal_color::kFeedback, terminal_color::kReset, feedback->current_percent);
   }
 
   void result(const GoalHandle::WrappedResult & result)
   {
     switch (result.code) {
       case rclcpp_action::ResultCode::SUCCEEDED:
-        RCLCPP_INFO(get_logger(), "Charging action succeeded");
+        RCLCPP_INFO(get_logger(), "%s[ACTION]%s Charging action succeeded",
+          terminal_color::kAction, terminal_color::kReset);
         break;
       case rclcpp_action::ResultCode::ABORTED:
-        RCLCPP_ERROR(get_logger(), "Charging action aborted by MRM");
+        RCLCPP_ERROR(get_logger(), "%s[ACTION RESULT][CPS]%s Charging action aborted: Collision Prevention Stop",
+          terminal_color::kAction, terminal_color::kReset);
         break;
       case rclcpp_action::ResultCode::CANCELED:
-        RCLCPP_WARN(get_logger(), "Charging action canceled");
+        RCLCPP_WARN(get_logger(), "%s[ACTION]%s Charging action canceled",
+          terminal_color::kAction, terminal_color::kReset);
         break;
       default:
-        RCLCPP_ERROR(get_logger(), "Charging action ended with unknown result");
+        RCLCPP_ERROR(get_logger(), "%s[ACTION]%s Charging action ended with unknown result",
+          terminal_color::kAction, terminal_color::kReset);
         break;
     }
   }

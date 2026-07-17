@@ -19,6 +19,16 @@
 
 using namespace std::chrono_literals;
 
+namespace terminal_color
+{
+constexpr const char * kReset = "\033[0m";
+constexpr const char * kService = "\033[1;36m";    // cyan
+constexpr const char * kAction = "\033[1;35m";     // magenta
+constexpr const char * kTopic = "\033[1;32m";      // green
+constexpr const char * kParameter = "\033[1;34m";  // blue
+constexpr const char * kSafety = "\033[1;31m";     // red
+}  // namespace terminal_color
+
 class AcrNode : public rclcpp::Node
 {
 public:
@@ -65,7 +75,6 @@ public:
     hold_timer_ = this->create_wall_timer(50ms, std::bind(&AcrNode::publish_idle_hold, this));
     publish_status("STANDBY");
     publish_safety_distance();
-    RCLCPP_INFO(get_logger(), "ACR server ready: safety_distance=%.2f m", safety_distance_);
   }
 
 private:
@@ -93,8 +102,11 @@ private:
     if (min_distance < safety_distance_ && action_active_.load()) {
       if (!is_danger_.exchange(true)) {
         publish_hold_position();
-        publish_status("MRM ACTIVE");
-        RCLCPP_ERROR(get_logger(), "MRM: obstacle %.3f m < safety_distance %.3f m", min_distance, safety_distance_);
+        publish_status("CPS ACTIVE");
+        RCLCPP_ERROR(get_logger(), "%s[SUBSCRIBER /scan][CPS]%s obstacle %.3f m < safety_distance %.3f m",
+          terminal_color::kSafety, terminal_color::kReset, min_distance, safety_distance_);
+        RCLCPP_ERROR(get_logger(), "%s[PUBLISHER /cmd_pos][CPS]%s holding current joint positions",
+          terminal_color::kSafety, terminal_color::kReset);
       }
     }
   }
@@ -103,24 +115,27 @@ private:
                      std::shared_ptr<acr_interfaces::srv::AuthVehicle::Response> response)
   {
     if (auth_response_delay_sec_ > 0.0) {
-      RCLCPP_INFO(get_logger(), "[Service] Demo delay: responding in %.1f s", auth_response_delay_sec_);
+      RCLCPP_INFO(get_logger(), "%s[SERVICE]%s Demo delay: responding in %.1f s",
+        terminal_color::kService, terminal_color::kReset, auth_response_delay_sec_);
       std::this_thread::sleep_for(std::chrono::duration<double>(auth_response_delay_sec_));
     }
     authenticated_.store(request->vin_number == approved_vin_);
     response->is_approved = authenticated_.load();
     publish_status(response->is_approved ? "AUTHENTICATED" : "AUTH REJECTED");
-    RCLCPP_INFO(get_logger(), "VIN [%s]: %s", request->vin_number.c_str(),
-      response->is_approved ? "approved" : "rejected");
+    RCLCPP_INFO(get_logger(), "%s[SERVICE]%s VIN [%s]: %s", terminal_color::kService,
+      terminal_color::kReset, request->vin_number.c_str(), response->is_approved ? "approved" : "rejected");
   }
 
   rclcpp_action::GoalResponse handle_goal(const rclcpp_action::GoalUUID &,
                                            std::shared_ptr<const ChargeRobot::Goal> goal)
   {
     if (!authenticated_.load() || action_active_.load() || std::abs(goal->target_angle) > 3.14) {
-      RCLCPP_WARN(get_logger(), "Charging goal rejected");
+      RCLCPP_WARN(get_logger(), "%s[ACTION]%s Charging goal rejected", terminal_color::kAction, terminal_color::kReset);
       return rclcpp_action::GoalResponse::REJECT;
     }
     is_danger_.store(false);
+    RCLCPP_INFO(get_logger(), "%s[ACTION]%s Charging goal accepted: joint1 target %.3f rad",
+      terminal_color::kAction, terminal_color::kReset, goal->target_angle);
     return rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE;
   }
 
@@ -140,19 +155,25 @@ private:
     publish_status("MOVING TO CHARGE PORT");
     const double start_angle = current_angle();
     const double start_joint2_angle = current_joint2_angle();
+    RCLCPP_INFO(get_logger(), "%s[SUBSCRIBER /joint_states]%s start joint1=%.3f, joint2=%.3f rad",
+      terminal_color::kTopic, terminal_color::kReset, start_angle, start_joint2_angle);
     const double target = goal_handle->get_goal()->target_angle;
     const double pre_approach_joint1 = start_angle + 0.65 * (target - start_angle);
     const double pre_approach_joint2 = start_joint2_angle + 0.35 * (joint2_target_angle_ - start_joint2_angle);
     constexpr int kSteps = 200;
     rclcpp::Rate control_rate(1000.0 / static_cast<double>(control_period_ms_), get_clock());
     auto result = std::make_shared<ChargeRobot::Result>();
+    RCLCPP_INFO(get_logger(), "%s[PUBLISHER /cmd_pos]%s joint1 trajectory started",
+      terminal_color::kTopic, terminal_color::kReset);
+    RCLCPP_INFO(get_logger(), "%s[PUBLISHER /joint2_cmd_pos]%s joint2 trajectory started",
+      terminal_color::kTopic, terminal_color::kReset);
     publish_joint2_command(start_joint2_angle);
 
     for (int step = 0; step <= kSteps && rclcpp::ok(); ++step) {
       if (is_danger_.load()) {
         publish_hold_position();
         result->success = false;
-        publish_status("MRM ACTIVE");
+        publish_status("CPS ACTIVE");
         goal_handle->abort(result);
         action_active_.store(false);
         return;
@@ -191,7 +212,7 @@ private:
       if (is_danger_.load()) {
         publish_hold_position();
         result->success = false;
-        publish_status("MRM ACTIVE");
+        publish_status("CPS ACTIVE");
         goal_handle->abort(result);
         action_active_.store(false);
         return;
@@ -209,6 +230,8 @@ private:
       control_rate.sleep();
     }
     result->success = true;
+    RCLCPP_INFO(get_logger(), "%s[PUBLISHER /cmd_pos][/joint2_cmd_pos]%s final target command sent",
+      terminal_color::kTopic, terminal_color::kReset);
     publish_progress(100.0);
     publish_status("CHARGING POSITION REACHED");
     goal_handle->succeed(result);
@@ -310,6 +333,8 @@ private:
         } else {
           safety_distance_ = parameter.as_double();
           publish_safety_distance();
+          RCLCPP_INFO(get_logger(), "%s[PARAMETER]%s safety_distance updated to %.2f m",
+            terminal_color::kParameter, terminal_color::kReset, safety_distance_);
         }
       }
     }
