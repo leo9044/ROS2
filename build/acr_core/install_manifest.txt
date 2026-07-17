@@ -6,6 +6,7 @@
 /home/leo/acr_ws/install/acr_core/share/acr_core/config/bridge.yaml
 /home/leo/acr_ws/install/acr_core/share/acr_core/launch/acr_system.launch.py
 /home/leo/acr_ws/install/acr_core/share/acr_core/launch/.gitkeep
+/home/leo/acr_ws/install/acr_core/share/acr_core/launch/__pycache__/acr_system.launch.cpython-312.pyc
 /home/leo/acr_ws/install/acr_core/share/acr_core/models/ev_vehicle.sdf
 /home/leo/acr_ws/install/acr_core/share/acr_core/models/box_obstacle.sdf
 /home/leo/acr_ws/install/acr_core/share/acr_core/urdf/acr_rrbot.urdf

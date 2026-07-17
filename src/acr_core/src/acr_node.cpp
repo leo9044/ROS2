@@ -15,6 +15,7 @@
 #include "sensor_msgs/msg/joint_state.hpp"
 #include "sensor_msgs/msg/laser_scan.hpp"
 #include "std_msgs/msg/float64.hpp"
+#include "std_msgs/msg/string.hpp"
 
 using namespace std::chrono_literals;
 
@@ -29,10 +30,15 @@ public:
     safety_distance_ = this->declare_parameter<double>("safety_distance", 0.15);
     approved_vin_ = this->declare_parameter<std::string>("approved_vin", "ACR-2026-0001");
     control_period_ms_ = this->declare_parameter<int>("control_period_ms", 50);
-    joint2_target_angle_ = this->declare_parameter<double>("joint2_target_angle", 0.70);
+    // joint1=0.724 and joint2=0.847 align the plug axis with the port normal.
+    joint2_target_angle_ = this->declare_parameter<double>("joint2_target_angle", 0.847);
 
     command_pub_ = this->create_publisher<std_msgs::msg::Float64>("/cmd_pos", 10);
     joint2_command_pub_ = this->create_publisher<std_msgs::msg::Float64>("/joint2_cmd_pos", 10);
+    status_pub_ = this->create_publisher<std_msgs::msg::String>("/acr/status", rclcpp::QoS(1).transient_local());
+    progress_pub_ = this->create_publisher<std_msgs::msg::Float64>("/acr/progress", 10);
+    safety_distance_pub_ = this->create_publisher<std_msgs::msg::Float64>(
+      "/acr/safety_distance", rclcpp::QoS(1).transient_local());
 
     scan_group_ = this->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
     rclcpp::SubscriptionOptions scan_options;
@@ -56,6 +62,8 @@ public:
     parameter_callback_ = this->add_on_set_parameters_callback(
       std::bind(&AcrNode::set_parameters, this, std::placeholders::_1));
     hold_timer_ = this->create_wall_timer(50ms, std::bind(&AcrNode::publish_idle_hold, this));
+    publish_status("STANDBY");
+    publish_safety_distance();
     RCLCPP_INFO(get_logger(), "ACR server ready: safety_distance=%.2f m", safety_distance_);
   }
 
@@ -84,6 +92,7 @@ private:
     if (min_distance < safety_distance_ && action_active_.load()) {
       if (!is_danger_.exchange(true)) {
         publish_hold_position();
+        publish_status("MRM ACTIVE");
         RCLCPP_ERROR(get_logger(), "MRM: obstacle %.3f m < safety_distance %.3f m", min_distance, safety_distance_);
       }
     }
@@ -94,6 +103,7 @@ private:
   {
     authenticated_.store(request->vin_number == approved_vin_);
     response->is_approved = authenticated_.load();
+    publish_status(response->is_approved ? "AUTHENTICATED" : "AUTH REJECTED");
     RCLCPP_INFO(get_logger(), "VIN [%s]: %s", request->vin_number.c_str(),
       response->is_approved ? "approved" : "rejected");
   }
@@ -122,6 +132,7 @@ private:
   void execute(const std::shared_ptr<GoalHandle> goal_handle)
   {
     action_active_.store(true);
+    publish_status("MOVING TO CHARGE PORT");
     const double start_angle = current_angle();
     const double start_joint2_angle = current_joint2_angle();
     const double target = goal_handle->get_goal()->target_angle;
@@ -135,6 +146,7 @@ private:
       if (is_danger_.load()) {
         publish_hold_position();
         result->success = false;
+        publish_status("MRM ACTIVE");
         goal_handle->abort(result);
         action_active_.store(false);
         return;
@@ -142,6 +154,7 @@ private:
       if (goal_handle->is_canceling()) {
         publish_hold_position();
         result->success = false;
+        publish_status("CANCELED");
         goal_handle->canceled(result);
         action_active_.store(false);
         return;
@@ -161,12 +174,15 @@ private:
       const double measured_travel = std::abs(current_angle() - start_angle);
       feedback->current_percent = travel < 1e-6 ? 100.0 :
         std::clamp(100.0 * measured_travel / travel, 0.0, 100.0);
+      publish_progress(feedback->current_percent);
       goal_handle->publish_feedback(feedback);
       std::this_thread::sleep_for(std::chrono::milliseconds(control_period_ms_));
     }
     publish_command(target);
     publish_joint2_command(joint2_target_angle_);
     result->success = true;
+    publish_progress(100.0);
+    publish_status("CHARGING POSITION REACHED");
     goal_handle->succeed(result);
     action_active_.store(false);
   }
@@ -224,6 +240,27 @@ private:
     }
   }
 
+  void publish_status(const std::string & status)
+  {
+    std_msgs::msg::String message;
+    message.data = status;
+    status_pub_->publish(message);
+  }
+
+  void publish_progress(double percent)
+  {
+    std_msgs::msg::Float64 message;
+    message.data = percent;
+    progress_pub_->publish(message);
+  }
+
+  void publish_safety_distance()
+  {
+    std_msgs::msg::Float64 message;
+    message.data = safety_distance_;
+    safety_distance_pub_->publish(message);
+  }
+
   rcl_interfaces::msg::SetParametersResult set_parameters(const std::vector<rclcpp::Parameter> & parameters)
   {
     rcl_interfaces::msg::SetParametersResult result;
@@ -235,6 +272,7 @@ private:
           result.reason = "safety_distance must be positive";
         } else {
           safety_distance_ = parameter.as_double();
+          publish_safety_distance();
         }
       }
     }
@@ -246,7 +284,7 @@ private:
   int control_period_ms_{50};
   double joint1_angle_{0.0};
   double joint2_angle_{0.0};
-  double joint2_target_angle_{-0.70};
+  double joint2_target_angle_{0.847};
   bool has_joint_state_{false};
   std::mutex state_mutex_;
   std::atomic_bool authenticated_{false};
@@ -257,6 +295,9 @@ private:
   rclcpp::CallbackGroup::SharedPtr scan_group_;
   rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr command_pub_;
   rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr joint2_command_pub_;
+  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr status_pub_;
+  rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr progress_pub_;
+  rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr safety_distance_pub_;
   rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr scan_sub_;
   rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr joint_sub_;
   rclcpp::Service<acr_interfaces::srv::AuthVehicle>::SharedPtr auth_service_;

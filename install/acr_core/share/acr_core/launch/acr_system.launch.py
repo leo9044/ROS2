@@ -50,13 +50,18 @@ def generate_launch_description():
     safety_distance = LaunchConfiguration('safety_distance')
     spawn_obstacle = LaunchConfiguration('spawn_obstacle')
     obstacle_delay_sec = LaunchConfiguration('obstacle_delay_sec')
+    control_period_ms = LaunchConfiguration('control_period_ms')
+    car_start_delay_sec = LaunchConfiguration('car_start_delay_sec')
     acr_node = Node(
         package='acr_core', executable='acr_node', output='screen',
-        parameters=[{'use_sim_time': True, 'safety_distance': safety_distance}])
+        parameters=[
+            {'use_sim_time': True, 'safety_distance': safety_distance},
+            {'control_period_ms': control_period_ms},
+        ])
 
     car_node = Node(
         package='acr_core', executable='car_node', output='screen',
-        parameters=[{'target_angle': 1.0, 'vin_number': 'ACR-2026-0001'}])
+        parameters=[{'target_angle': 0.724, 'vin_number': 'ACR-2026-0001'}])
 
     scene_visualizer = Node(
         package='acr_core', executable='acr_visualizer', output='screen',
@@ -71,17 +76,21 @@ def generate_launch_description():
         condition=IfCondition(spawn_obstacle),
         arguments=['-world', 'acr_world', '-name', 'mrm_obstacle', '-file',
                    os.path.join(pkg_share, 'models', 'box_obstacle.sdf'),
-                   '-x', '1.18', '-y', '0.0', '-z', '0.0'])
+                   '-x', '1.23', '-y', '0.0', '-z', '0.0'])
 
     return LaunchDescription([
         DeclareLaunchArgument('spawn_obstacle', default_value='false',
                               description='Spawn the MRM test Box during charging.'),
         DeclareLaunchArgument('obstacle_delay_sec', default_value='5.0',
                               description='Delay in seconds before spawning the MRM test Box.'),
+        DeclareLaunchArgument('car_start_delay_sec', default_value='4.0',
+                              description='Delay in seconds before CAR_Node starts Service and Action.'),
+        DeclareLaunchArgument('control_period_ms', default_value='50',
+                              description='ACR trajectory command period in milliseconds.'),
         DeclareLaunchArgument('safety_distance', default_value='0.15',
                               description='MRM detection distance in meters for this simulation.'),
         gazebo,
         TimerAction(period=2.0, actions=[spawn_robot, spawn_vehicle, bridge, robot_state_publisher, acr_node, scene_visualizer, rviz]),
-        TimerAction(period=4.0, actions=[car_node]),
+        TimerAction(period=car_start_delay_sec, actions=[car_node]),
         TimerAction(period=obstacle_delay_sec, actions=[obstacle]),
     ])

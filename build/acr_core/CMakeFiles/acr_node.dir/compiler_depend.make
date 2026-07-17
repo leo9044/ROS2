@@ -475,8 +475,13 @@ CMakeFiles/acr_node.dir/src/acr_node.cpp.o: /home/leo/acr_ws/src/acr_core/src/ac
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float64__type_support.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__builder.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__struct.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__traits.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__type_support.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/float64.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/string.hpp \
   /opt/ros/jazzy/include/tracetools/tracetools/config.h \
   /opt/ros/jazzy/include/tracetools/tracetools/tracetools.h \
   /opt/ros/jazzy/include/tracetools/tracetools/utils.hpp \
@@ -1257,6 +1262,20 @@ CMakeFiles/acr_node.dir/src/acr_node.cpp.o: /home/leo/acr_ws/src/acr_core/src/ac
 
 /usr/include/c++/13/bits/locale_facets.h:
 
+/usr/include/c++/13/bits/locale_classes.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
+/usr/include/features-time64.h:
+
+/usr/include/c++/13/type_traits:
+
+/usr/include/c++/13/bits/list.tcc:
+
+/usr/include/c++/13/bits/istream.tcc:
+
+/usr/include/c++/13/bits/ios_base.h:
+
 /usr/include/c++/13/cmath:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/message_memory_strategy.hpp:
@@ -1661,10 +1680,6 @@ CMakeFiles/acr_node.dir/src/acr_node.cpp.o: /home/leo/acr_ws/src/acr_core/src/ac
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_status__struct.h:
 
-/usr/include/x86_64-linux-gnu/bits/ss_flags.h:
-
-/opt/ros/jazzy/include/rmw/rmw/events_statuses/events_statuses.h:
-
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_services_interface.hpp:
 
 /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp:
@@ -1861,7 +1876,7 @@ CMakeFiles/acr_node.dir/src/acr_node.cpp.o: /home/leo/acr_ws/src/acr_core/src/ac
 
 /opt/ros/jazzy/include/rmw/rmw/impl/config.h:
 
-/usr/include/c++/13/bits/ios_base.h:
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__struct.hpp:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
 
@@ -2025,8 +2040,6 @@ CMakeFiles/acr_node.dir/src/acr_node.cpp.o: /home/leo/acr_ws/src/acr_core/src/ac
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/get_node_base_interface.hpp:
 
-/usr/include/c++/13/bits/istream.tcc:
-
 /opt/ros/jazzy/include/rcutils/rcutils/visibility_control.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/get_node_clock_interface.hpp:
@@ -2062,6 +2075,12 @@ CMakeFiles/acr_node.dir/src/acr_node.cpp.o: /home/leo/acr_ws/src/acr_core/src/ac
 /opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/msg/detail/type_description__struct.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_clock_interface_traits.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/ss_flags.h:
+
+/opt/ros/jazzy/include/rmw/rmw/events_statuses/events_statuses.h:
+
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__traits.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_topics_interface.hpp:
 
@@ -2273,6 +2292,8 @@ CMakeFiles/acr_node.dir/src/acr_node.cpp.o: /home/leo/acr_ws/src/acr_core/src/ac
 
 /opt/ros/jazzy/include/rmw/rmw/events_statuses/incompatible_type.h:
 
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/string.hpp:
+
 /usr/include/c++/13/pstl/glue_memory_defs.h:
 
 /usr/include/c++/13/bits/memory_resource.h:
@@ -2314,6 +2335,8 @@ CMakeFiles/acr_node.dir/src/acr_node.cpp.o: /home/leo/acr_ws/src/acr_core/src/ac
 /opt/ros/jazzy/include/rclcpp/rclcpp/executors/executor_entities_collector.hpp:
 
 /opt/ros/jazzy/include/rmw/rmw/impl/cpp/demangle.hpp:
+
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__type_support.hpp:
 
 /opt/ros/jazzy/include/rmw/rmw/init.h:
 
@@ -2487,6 +2510,8 @@ CMakeFiles/acr_node.dir/src/acr_node.cpp.o: /home/leo/acr_ws/src/acr_core/src/ac
 
 /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__traits.hpp:
 
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__builder.hpp:
+
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__builder.hpp:
 
 /opt/ros/jazzy/include/std_msgs/std_msgs/msg/float64.hpp:
@@ -2554,13 +2579,3 @@ CMakeFiles/acr_node.dir/src/acr_node.cpp.o: /home/leo/acr_ws/src/acr_core/src/ac
 /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__type_support.hpp:
 
 /usr/include/c++/13/bits/invoke.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
-/usr/include/features-time64.h:
-
-/usr/include/c++/13/type_traits:
-
-/usr/include/c++/13/bits/list.tcc:
-
-/usr/include/c++/13/bits/locale_classes.h:

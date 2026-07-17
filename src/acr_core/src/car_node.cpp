@@ -19,7 +19,7 @@ public:
   CarNode() : Node("car_node")
   {
     vin_number_ = declare_parameter<std::string>("vin_number", "ACR-2026-0001");
-    target_angle_ = declare_parameter<double>("target_angle", 1.0);
+    target_angle_ = declare_parameter<double>("target_angle", 0.724);
     auth_client_ = create_client<acr_interfaces::srv::AuthVehicle>("/auth_vehicle");
     action_client_ = rclcpp_action::create_client<ChargeRobot>(this, "/charge_robot");
     startup_timer_ = create_wall_timer(200ms, std::bind(&CarNode::begin_authentication, this));
@@ -98,7 +98,7 @@ private:
   }
 
   std::string vin_number_;
-  double target_angle_{1.0};
+  double target_angle_{0.724};
   rclcpp::Client<acr_interfaces::srv::AuthVehicle>::SharedPtr auth_client_;
   rclcpp_action::Client<ChargeRobot>::SharedPtr action_client_;
   rclcpp::TimerBase::SharedPtr startup_timer_;
