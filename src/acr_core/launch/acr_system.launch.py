@@ -57,6 +57,7 @@ def generate_launch_description():
     action_goal_delay_sec = LaunchConfiguration('action_goal_delay_sec')
     vin_number = LaunchConfiguration('vin_number')
     target_angle = LaunchConfiguration('target_angle')
+    
     acr_node = Node(
         package='acr_core', executable='acr_node', output='screen',
         parameters=[
@@ -109,8 +110,20 @@ def generate_launch_description():
                               description='Joint1 target angle sent in the charging Action.'),
         DeclareLaunchArgument('safety_distance', default_value='0.15',
                               description='Collision Prevention Stop detection distance in meters for this simulation.'),
+        
+        # 1. 가제보와 RViz는 즉시 실행
         gazebo,
-        TimerAction(period=2.0, actions=[spawn_robot, spawn_vehicle, bridge, robot_state_publisher, acr_node, scene_visualizer, rviz]),
-        TimerAction(period=car_start_delay_sec, actions=[car_node]),
-        TimerAction(period=obstacle_delay_sec, actions=[obstacle]),
+        rviz,
+        
+        # 2. 로봇 및 나머지 시스템은 10초 대기 후 시작
+        TimerAction(
+            period=20.0,
+            actions=[
+                TimerAction(period=2.0, actions=[spawn_robot, spawn_vehicle, bridge, robot_state_publisher, acr_node, scene_visualizer]),
+                TimerAction(period=car_start_delay_sec, actions=[car_node]),
+                TimerAction(period=obstacle_delay_sec, actions=[obstacle]),
+            ]
+        )
     ])
+
+
