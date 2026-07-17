@@ -30,6 +30,7 @@ public:
     safety_distance_ = this->declare_parameter<double>("safety_distance", 0.15);
     approved_vin_ = this->declare_parameter<std::string>("approved_vin", "ACR-2026-0001");
     control_period_ms_ = this->declare_parameter<int>("control_period_ms", 50);
+    auth_response_delay_sec_ = this->declare_parameter<double>("auth_response_delay_sec", 0.0);
     // joint1=0.724 and joint2=0.847 align the plug axis with the port normal.
     joint2_target_angle_ = this->declare_parameter<double>("joint2_target_angle", 0.847);
 
@@ -101,6 +102,10 @@ private:
   void auth_callback(const std::shared_ptr<acr_interfaces::srv::AuthVehicle::Request> request,
                      std::shared_ptr<acr_interfaces::srv::AuthVehicle::Response> response)
   {
+    if (auth_response_delay_sec_ > 0.0) {
+      RCLCPP_INFO(get_logger(), "[Service] Demo delay: responding in %.1f s", auth_response_delay_sec_);
+      std::this_thread::sleep_for(std::chrono::duration<double>(auth_response_delay_sec_));
+    }
     authenticated_.store(request->vin_number == approved_vin_);
     response->is_approved = authenticated_.load();
     publish_status(response->is_approved ? "AUTHENTICATED" : "AUTH REJECTED");
@@ -139,6 +144,7 @@ private:
     const double pre_approach_joint1 = start_angle + 0.65 * (target - start_angle);
     const double pre_approach_joint2 = start_joint2_angle + 0.35 * (joint2_target_angle_ - start_joint2_angle);
     constexpr int kSteps = 200;
+    rclcpp::Rate control_rate(1000.0 / static_cast<double>(control_period_ms_), get_clock());
     auto result = std::make_shared<ChargeRobot::Result>();
     publish_joint2_command(start_joint2_angle);
 
@@ -176,10 +182,32 @@ private:
         std::clamp(100.0 * measured_travel / travel, 0.0, 100.0);
       publish_progress(feedback->current_percent);
       goal_handle->publish_feedback(feedback);
-      std::this_thread::sleep_for(std::chrono::milliseconds(control_period_ms_));
+      // The ROS clock stops with Gazebo. A paused simulation must not finish the Action.
+      control_rate.sleep();
     }
     publish_command(target);
     publish_joint2_command(joint2_target_angle_);
+    while (rclcpp::ok() && !at_target(target, joint2_target_angle_)) {
+      if (is_danger_.load()) {
+        publish_hold_position();
+        result->success = false;
+        publish_status("MRM ACTIVE");
+        goal_handle->abort(result);
+        action_active_.store(false);
+        return;
+      }
+      if (goal_handle->is_canceling()) {
+        publish_hold_position();
+        result->success = false;
+        publish_status("CANCELED");
+        goal_handle->canceled(result);
+        action_active_.store(false);
+        return;
+      }
+      publish_command(target);
+      publish_joint2_command(joint2_target_angle_);
+      control_rate.sleep();
+    }
     result->success = true;
     publish_progress(100.0);
     publish_status("CHARGING POSITION REACHED");
@@ -208,6 +236,15 @@ private:
   {
     std::lock_guard<std::mutex> lock(state_mutex_);
     return has_joint_state_ ? joint2_angle_ : 0.0;
+  }
+
+  bool at_target(double joint1_target, double joint2_target)
+  {
+    constexpr double kPositionTolerance = 0.03;
+    std::lock_guard<std::mutex> lock(state_mutex_);
+    return has_joint_state_ &&
+      std::abs(joint1_angle_ - joint1_target) <= kPositionTolerance &&
+      std::abs(joint2_angle_ - joint2_target) <= kPositionTolerance;
   }
 
   void publish_command(double angle)
@@ -282,6 +319,7 @@ private:
   double safety_distance_{0.15};
   std::string approved_vin_;
   int control_period_ms_{50};
+  double auth_response_delay_sec_{0.0};
   double joint1_angle_{0.0};
   double joint2_angle_{0.0};
   double joint2_target_angle_{0.847};

@@ -18,7 +18,7 @@ ament_target_dependencies(car_node
   acr_interfaces rclcpp rclcpp_action)
 
 add_executable(acr_visualizer src/acr_visualizer.cpp)
-ament_target_dependencies(acr_visualizer rclcpp visualization_msgs)
+ament_target_dependencies(acr_visualizer rclcpp std_msgs visualization_msgs)
 
 install(TARGETS acr_node car_node acr_visualizer
   DESTINATION lib/${PROJECT_NAME}

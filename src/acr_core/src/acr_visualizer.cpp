@@ -64,8 +64,10 @@ private:
       2.50, 0.0, 1.43, 1.35, 1.12, 0.40, 0.12F, 0.16F, 0.22F));
     scene.markers.push_back(marker(8, "ev_vehicle", visualization_msgs::msg::Marker::CUBE,
       2.60, 0.0, 0.50, 0.78, 0.92, 0.12, 0.06F, 0.12F, 0.25F));
+    scene.markers.push_back(marker(9, "ev_vehicle", visualization_msgs::msg::Marker::CUBE,
+      1.355, 0.0, 1.10, 0.035, 0.32, 0.32, 0.03F, 0.03F, 0.03F));
     auto port = marker(2, "ev_vehicle", visualization_msgs::msg::Marker::CYLINDER,
-      1.37, 0.0, 1.10, 0.22, 0.22, 0.035, 1.0F, 0.45F, 0.02F);
+      1.325, 0.0, 1.10, 0.22, 0.22, 0.055, 1.0F, 0.45F, 0.02F);
     port.pose.orientation.y = 0.7071068;
     port.pose.orientation.w = 0.7071068;
     scene.markers.push_back(port);
@@ -95,9 +97,9 @@ private:
   void add_system_markers(visualization_msgs::msg::MarkerArray & scene)
   {
     auto safety = marker(20, "acr_system", visualization_msgs::msg::Marker::CYLINDER,
-      0.30, 0.0, 0.0, 2.0 * safety_distance_, 2.0 * safety_distance_, 0.018,
+      0.0, 0.0, 0.0, 2.0 * safety_distance_, 2.0 * safety_distance_, 0.018,
       0.95F, 0.05F, 0.05F);
-    safety.header.frame_id = "tool0";
+    safety.header.frame_id = "lidar_link";
     safety.color.a = 0.22F;
     scene.markers.push_back(safety);
 

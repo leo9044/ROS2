@@ -159,11 +159,12 @@ acr_visualizer: /opt/ros/jazzy/lib/libservice_msgs__rosidl_typesupport_cpp.so
 acr_visualizer: /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
 acr_visualizer: /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
 acr_visualizer: /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
-acr_visualizer: /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_typesupport_c.so
-acr_visualizer: /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_generator_c.so
 acr_visualizer: /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
 acr_visualizer: /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_cpp.so
+acr_visualizer: /opt/ros/jazzy/lib/libstd_msgs__rosidl_generator_py.so
+acr_visualizer: /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_typesupport_c.so
 acr_visualizer: /opt/ros/jazzy/lib/libstd_msgs__rosidl_typesupport_c.so
+acr_visualizer: /opt/ros/jazzy/lib/libgeometry_msgs__rosidl_generator_c.so
 acr_visualizer: /opt/ros/jazzy/lib/libstd_msgs__rosidl_generator_c.so
 acr_visualizer: /opt/ros/jazzy/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so
 acr_visualizer: /opt/ros/jazzy/lib/librosidl_typesupport_fastrtps_c.so

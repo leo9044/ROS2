@@ -40,7 +40,7 @@ def generate_launch_description():
         package='ros_gz_bridge', executable='parameter_bridge', output='screen',
         parameters=[
             {'config_file': os.path.join(pkg_share, 'config', 'bridge.yaml')},
-            {'override_frame_id': 'tool0'},
+            {'override_frame_id': 'lidar_link'},
         ])
 
     robot_state_publisher = Node(
@@ -52,16 +52,26 @@ def generate_launch_description():
     obstacle_delay_sec = LaunchConfiguration('obstacle_delay_sec')
     control_period_ms = LaunchConfiguration('control_period_ms')
     car_start_delay_sec = LaunchConfiguration('car_start_delay_sec')
+    auth_request_delay_sec = LaunchConfiguration('auth_request_delay_sec')
+    auth_response_delay_sec = LaunchConfiguration('auth_response_delay_sec')
+    action_goal_delay_sec = LaunchConfiguration('action_goal_delay_sec')
+    vin_number = LaunchConfiguration('vin_number')
+    target_angle = LaunchConfiguration('target_angle')
     acr_node = Node(
         package='acr_core', executable='acr_node', output='screen',
         parameters=[
             {'use_sim_time': True, 'safety_distance': safety_distance},
             {'control_period_ms': control_period_ms},
+            {'auth_response_delay_sec': auth_response_delay_sec},
         ])
 
     car_node = Node(
         package='acr_core', executable='car_node', output='screen',
-        parameters=[{'target_angle': 0.724, 'vin_number': 'ACR-2026-0001'}])
+        parameters=[
+            {'target_angle': target_angle, 'vin_number': vin_number},
+            {'auth_request_delay_sec': auth_request_delay_sec},
+            {'action_goal_delay_sec': action_goal_delay_sec},
+        ])
 
     scene_visualizer = Node(
         package='acr_core', executable='acr_visualizer', output='screen',
@@ -87,6 +97,16 @@ def generate_launch_description():
                               description='Delay in seconds before CAR_Node starts Service and Action.'),
         DeclareLaunchArgument('control_period_ms', default_value='50',
                               description='ACR trajectory command period in milliseconds.'),
+        DeclareLaunchArgument('auth_request_delay_sec', default_value='0.0',
+                              description='Demo delay before CAR sends the authentication request.'),
+        DeclareLaunchArgument('auth_response_delay_sec', default_value='0.0',
+                              description='Demo delay before ACR returns the authentication response.'),
+        DeclareLaunchArgument('action_goal_delay_sec', default_value='0.0',
+                              description='Demo delay between authentication and Action goal transmission.'),
+        DeclareLaunchArgument('vin_number', default_value='ACR-2026-0001',
+                              description='VIN sent by CAR_Node for the authentication demo.'),
+        DeclareLaunchArgument('target_angle', default_value='0.724',
+                              description='Joint1 target angle sent in the charging Action.'),
         DeclareLaunchArgument('safety_distance', default_value='0.15',
                               description='MRM detection distance in meters for this simulation.'),
         gazebo,

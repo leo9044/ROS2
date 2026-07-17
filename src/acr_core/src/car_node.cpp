@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <chrono>
 #include <functional>
 #include <memory>
@@ -20,6 +21,8 @@ public:
   {
     vin_number_ = declare_parameter<std::string>("vin_number", "ACR-2026-0001");
     target_angle_ = declare_parameter<double>("target_angle", 0.724);
+    auth_request_delay_sec_ = declare_parameter<double>("auth_request_delay_sec", 0.0);
+    action_goal_delay_sec_ = declare_parameter<double>("action_goal_delay_sec", 0.0);
     auth_client_ = create_client<acr_interfaces::srv::AuthVehicle>("/auth_vehicle");
     action_client_ = rclcpp_action::create_client<ChargeRobot>(this, "/charge_robot");
     startup_timer_ = create_wall_timer(200ms, std::bind(&CarNode::begin_authentication, this));
@@ -32,6 +35,15 @@ private:
       return;
     }
     startup_timer_->cancel();
+    RCLCPP_INFO(get_logger(), "[Service] Server found; request will be sent in %.1f s", auth_request_delay_sec_);
+    auth_request_timer_ = create_wall_timer(
+      demo_delay(auth_request_delay_sec_),
+      std::bind(&CarNode::send_auth_request, this));
+  }
+
+  void send_auth_request()
+  {
+    auth_request_timer_->cancel();
     RCLCPP_INFO(get_logger(), "[Service] Requesting vehicle authentication for VIN: %s", vin_number_.c_str());
     auto request = std::make_shared<acr_interfaces::srv::AuthVehicle::Request>();
     request->vin_number = vin_number_;
@@ -45,8 +57,22 @@ private:
       RCLCPP_ERROR(get_logger(), "[Service] Vehicle authentication rejected");
       return;
     }
-    RCLCPP_INFO(get_logger(), "[Service] Vehicle authenticated; waiting for charging action server");
+    RCLCPP_INFO(get_logger(), "[Service] Vehicle authenticated; Action goal will be sent in %.1f s", action_goal_delay_sec_);
+    action_delay_timer_ = create_wall_timer(
+      demo_delay(action_goal_delay_sec_),
+      std::bind(&CarNode::begin_action_wait, this));
+  }
+
+  void begin_action_wait()
+  {
+    action_delay_timer_->cancel();
+    RCLCPP_INFO(get_logger(), "[Action] Waiting for charging action server");
     action_wait_timer_ = create_wall_timer(200ms, std::bind(&CarNode::send_goal_when_ready, this));
+  }
+
+  static std::chrono::milliseconds demo_delay(double seconds)
+  {
+    return std::chrono::milliseconds(std::max<long long>(1, static_cast<long long>(seconds * 1000.0)));
   }
 
   void send_goal_when_ready()
@@ -99,9 +125,13 @@ private:
 
   std::string vin_number_;
   double target_angle_{0.724};
+  double auth_request_delay_sec_{0.0};
+  double action_goal_delay_sec_{0.0};
   rclcpp::Client<acr_interfaces::srv::AuthVehicle>::SharedPtr auth_client_;
   rclcpp_action::Client<ChargeRobot>::SharedPtr action_client_;
   rclcpp::TimerBase::SharedPtr startup_timer_;
+  rclcpp::TimerBase::SharedPtr auth_request_timer_;
+  rclcpp::TimerBase::SharedPtr action_delay_timer_;
   rclcpp::TimerBase::SharedPtr action_wait_timer_;
 };
 

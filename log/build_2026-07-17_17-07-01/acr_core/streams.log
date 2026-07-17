@@ -1,0 +1,45 @@
+[0.026s] Invoking command in '/home/leo/acr_ws/build/acr_core': AMENT_PREFIX_PATH=/home/leo/acr_ws/install/acr_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/leo/acr_ws/install/acr_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/leo/acr_ws/install/acr_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/leo/acr_ws/build/acr_core -- -j12 -l12
+[0.089s] [ 66%] Built target car_node
+[0.089s] [ 66%] Built target acr_node
+[0.094s] [ 83%] Building CXX object CMakeFiles/acr_visualizer.dir/src/acr_visualizer.cpp.o
+[8.476s] [100%] Linking CXX executable acr_visualizer
+[8.789s] [100%] Built target acr_visualizer
+[8.797s] Invoked command in '/home/leo/acr_ws/build/acr_core' returned '0': AMENT_PREFIX_PATH=/home/leo/acr_ws/install/acr_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/leo/acr_ws/install/acr_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/leo/acr_ws/install/acr_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/leo/acr_ws/build/acr_core -- -j12 -l12
+[8.798s] Invoking command in '/home/leo/acr_ws/build/acr_core': AMENT_PREFIX_PATH=/home/leo/acr_ws/install/acr_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/leo/acr_ws/install/acr_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/leo/acr_ws/install/acr_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/leo/acr_ws/build/acr_core
+[8.804s] -- Install configuration: ""
+[8.805s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/lib/acr_core/acr_node
+[8.805s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/lib/acr_core/car_node
+[8.805s] -- Installing: /home/leo/acr_ws/install/acr_core/lib/acr_core/acr_visualizer
+[8.810s] -- Set non-toolchain portion of runtime path of "/home/leo/acr_ws/install/acr_core/lib/acr_core/acr_visualizer" to ""
+[8.810s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/config
+[8.811s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/config/.gitkeep
+[8.811s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/config/acr.rviz
+[8.811s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/config/bridge.yaml
+[8.811s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/launch
+[8.811s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/launch/acr_system.launch.py
+[8.812s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/launch/.gitkeep
+[8.812s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/launch/__pycache__
+[8.812s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/launch/__pycache__/acr_system.launch.cpython-312.pyc
+[8.812s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/models
+[8.812s] -- Installing: /home/leo/acr_ws/install/acr_core/share/acr_core/models/ev_vehicle.sdf
+[8.812s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/models/box_obstacle.sdf
+[8.813s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/urdf
+[8.813s] -- Installing: /home/leo/acr_ws/install/acr_core/share/acr_core/urdf/acr_rrbot.urdf
+[8.813s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/worlds
+[8.813s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/worlds/acr_empty.sdf
+[8.813s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/ament_index/resource_index/package_run_dependencies/acr_core
+[8.813s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/ament_index/resource_index/parent_prefix_path/acr_core
+[8.814s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/environment/ament_prefix_path.sh
+[8.815s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/environment/ament_prefix_path.dsv
+[8.816s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/environment/path.sh
+[8.816s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/environment/path.dsv
+[8.816s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/local_setup.bash
+[8.816s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/local_setup.sh
+[8.817s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/local_setup.zsh
+[8.817s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/local_setup.dsv
+[8.817s] -- Installing: /home/leo/acr_ws/install/acr_core/share/acr_core/package.dsv
+[8.818s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/ament_index/resource_index/packages/acr_core
+[8.819s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/cmake/acr_coreConfig.cmake
+[8.819s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/cmake/acr_coreConfig-version.cmake
+[8.819s] -- Up-to-date: /home/leo/acr_ws/install/acr_core/share/acr_core/package.xml
+[8.819s] Invoked command in '/home/leo/acr_ws/build/acr_core' returned '0': AMENT_PREFIX_PATH=/home/leo/acr_ws/install/acr_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/leo/acr_ws/install/acr_interfaces:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/leo/acr_ws/install/acr_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/leo/acr_ws/install/acr_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/leo/acr_ws/build/acr_core
