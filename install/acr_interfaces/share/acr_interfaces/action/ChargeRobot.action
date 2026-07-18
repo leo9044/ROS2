@@ -1,5 +1,0 @@
-float64 target_angle
----
-bool success
----
-float64 current_percent

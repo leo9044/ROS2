@@ -1,4 +1,0 @@
-Invoking command in '/home/leo/acr_ws/build/acr_core': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/leo/acr_ws/build/acr_core -- -j12 -l12
-Invoked command in '/home/leo/acr_ws/build/acr_core' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/leo/acr_ws/build/acr_core -- -j12 -l12
-Invoking command in '/home/leo/acr_ws/build/acr_core': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/leo/acr_ws/build/acr_core
-Invoked command in '/home/leo/acr_ws/build/acr_core' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/leo/acr_ws/build/acr_core
